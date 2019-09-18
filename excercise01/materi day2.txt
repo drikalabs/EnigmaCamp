@@ -1,0 +1,45 @@
+* variable
+- static variable -> variable dalam class utama diluar method
+- local variable -> variable dalam sebuah method
+- interface variable ->
+% -> modulus(sisa bagi) ganjil = x%2==1 
+*mean ?
+IEEE ->
+ISO ->
+RFC->
+
+*primitive data type tak bisa berisi null
+
+*oprator relational selalu menghasilkan bolean(true/false)
+<,>,<=,>=, == , !=
+
+*logical
+&& ->
+|| ->
+! ->kebalikan nilai. contoh: hasil true tapi tampilnya false
+
+*kondisi dalam suatu if atau percabangan hanya boleh menghasilkan bolean
+
+*kondisi AND(&&) harus kondisi semua harus benar (true)
+kemungkinan true adalah
+1 == 1 =true kondisi paling ideal untuk statement(perintah) AND harus keduanya true.
+1 == 0 =false
+0 == 1 =false
+0 == 0 =false
+ urutan methode
+acces modifier->Datatype->namaMethod(datatype nama_parameter)
+
+String to Interger -> Interger.parseInt(variable string); or anything use parse"typedata"
+any typedata to string-> String.valueOf(variable data)
+
+
+array index start from 0 (zero)
+
+for composisi
+ for(initial ;condisi(pembatas); )
+
+
+readline() input line
+
+
+Tugas

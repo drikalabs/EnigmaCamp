@@ -1,0 +1,20 @@
+/* class circle java
+        Circle roda = new Circle();// fungsi membuat objek baru berdasarkan cetakan clas circle
+        roda.r= 30;
+        System.out.println(roda.Print());
+        System.out.println(roda);
+
+        Circle plate = new Circle();
+        plate.r= 30;
+        System.out.println(plate.Print());
+        System.out.println(plate);
+
+         */
+        //  fungsi membuat objek baru berdasarkan cetakan clas mobil
+//        Mobil rush = new Mobil();
+//        rush.fillFuel(10);
+//        rush.fillFuel(10);
+//        System.out.println(rush.engineStart());
+//        rush.engineStop();
+//        rush.parking();
+//        System.out.println(rush.cettak());

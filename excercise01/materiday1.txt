@@ -1,0 +1,24 @@
+turing machine complete
+turing completeness ->
+
+case 
+- camelCase
+- PascalCase (standart java)
+- UPPERCASE
+- lowercase
+- Snake_case
+- kebab-case
+
+(-subroutine ??
+method in java??) its the sam thing
+primitive data type in java apa aja dan maksud nya?
+- 
+
+a=3
+b=4
+c=0 
+
+bagai mana cara a=4 b=3?
+c=b
+b=a
+a=c
