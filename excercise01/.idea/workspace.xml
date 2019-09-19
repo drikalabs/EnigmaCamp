@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5531217b-70a8-4225-872c-5b108200d61f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Retrn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Retrn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise02/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise05/src/Main4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/MainRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/MainWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/model/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/service/PersonGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercise02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercise05/out/production/Colection/com/enigma/model/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise05/out/production/Colection/com/enigma/model/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../excercise05/src/com/enigma/model/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise05/src/com/enigma/model/Circle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +28,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -21,8 +38,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1QbWewmJBijqjYyAkErufgyvU8b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignmen1" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

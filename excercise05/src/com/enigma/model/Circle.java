@@ -15,11 +15,6 @@ public class Circle {
         public Double getRound(){
             return pi*r*2;
         }
-        public String print() {
-        return "Circle{" +
-                "pi=" + pi +
-                ", r=" + r +
-                '}'; }
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -37,6 +32,16 @@ public class Circle {
         public void setR(Integer r) {
             this.r = r;
         }
+
+
+    public String print() {
+        return "Circle{" +
+                "pi=" + pi +
+                ", r=" + r +
+                ", r=" + getRound() +
+                ", r=" + getSurface() +
+                '}';
+    }
 }
 
 

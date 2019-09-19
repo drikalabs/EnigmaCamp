@@ -2,34 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6885333a-a4ce-46e3-86f3-210e0854b30d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../excercise04/MobaHero.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/Affected.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/AssassinHeroes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/Heroes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/Offensive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/Skill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/StregntHeroes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/Tower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise05/Colection.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise05/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise05/src/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise05/src/com/enigma/model/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/com/enigma/model/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/com/enigma/model/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/com/enigma/model/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/out/production/Robot/com/enigma/model/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/src/com/enigma/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/src/com/enigma/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assignmen1/Robot/src/com/enigma/model/Robot.java" beforeDir="false" afterPath="$PROJECT_DIR$/../assignmen1/Robot/src/com/enigma/model/Robot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/AssassinHeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/Heroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/HitAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise04/src/com/enigma/model/HitAble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/Offensive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/StregnthBaseHeroes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/enigma/model/Tower.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/service/FileService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
