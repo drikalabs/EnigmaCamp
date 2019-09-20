@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3fa9026-f7c9-447e-a15b-1755dac8ab93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../assignmen1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assignmen1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../assignmen1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise05/src/Main4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/Main7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/MainRead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/MainWrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/model/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/model/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/service/FileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../excercise06/src/com/enigma/service/PersonGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise01/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise01/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise01/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise05/out/production/Colection/com/enigma/model/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise05/out/production/Colection/com/enigma/model/Circle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise05/src/com/enigma/model/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise05/src/com/enigma/model/Circle.java" afterDir="false" />
-    </list>
+    <list default="true" id="e3fa9026-f7c9-447e-a15b-1755dac8ab93" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

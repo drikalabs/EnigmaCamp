@@ -5,7 +5,7 @@ import java.util.*;
 
 public class PersonGenerator {
     private List<String>datanama=new ArrayList<>();
-    private List<String>dataumur=new ArrayList<>();
+    private List<Integer>dataumur=new ArrayList<>();
     private List<String>datagender=new ArrayList<>();
     private String path;
 
@@ -29,7 +29,7 @@ public class PersonGenerator {
                 String getName=str.substring(7,30);
                 datanama.add(getName.trim());
                 String getAge =str.substring(38,40);
-                dataumur.add(getAge.trim());
+                dataumur.add(Integer.parseInt(getAge));
                 String getGender=str.substring(48,49);
                 datagender.add(getGender.trim());
             }
@@ -42,15 +42,59 @@ public class PersonGenerator {
     }
     public void print() {
         Iterator<String>stringIterator= datanama.iterator();
-        Iterator<String>stringIteratorumur= dataumur.iterator();
+        Iterator<Integer>stringIteratorumur= dataumur.iterator();
         Iterator<String>stringIteratorgender= datagender.iterator();
         while (stringIterator.hasNext() && stringIteratorumur.hasNext() && stringIteratorgender.hasNext()){
             String data = stringIterator.next();
-            String data2 =stringIteratorumur.next();
+            Integer data2 =stringIteratorumur.next();
             String data3 =stringIteratorgender.next();
             System.out.print(data);
-            System.out.print(Integer.parseInt(data2));
+            System.out.print(data2);
             System.out.print(data3);
-            }
+        }
     }
+    public void getAverageAge(){
+        Integer total=0;
+        for (int i = 0; i <dataumur.size() ; i++) {
+            total+=dataumur.get(i);
+        }
+        Integer average=total/dataumur.size();
+        System.out.println("Rata Rata Umur :"+average);
+    }
+    public void getFriend(){
+        File file=new File(this.path);
+        try {
+            FileReader fileReader =new FileReader(file);
+            BufferedReader bufferedReader =new BufferedReader(fileReader);
+            List<String> stringList=new ArrayList<>();
+            while (true){
+                String txt=bufferedReader.readLine();
+                if (txt==null){
+                    break;
+                }
+                stringList.add(txt);
+            }
+            int Male=0;
+            int Female=0;
+            for (String str: stringList){
+                String getName=str.substring(7,30);
+                String getAge =str.substring(38,40);
+                String getGender=str.substring(48,49);
+                if (getGender.equals("L")){
+                    Male++;
+                }else {Female++;}
+            }
+            System.out.println("Jumlah Teman Pria   :"+Male);
+            System.out.println("Jumlah Teman Wanita :"+Female);
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+    }
+//    public void getTermudaTertua(){
+//
+//    }
 }
+
