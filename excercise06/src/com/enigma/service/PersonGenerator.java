@@ -1,7 +1,10 @@
 package com.enigma.service;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 public class PersonGenerator {
     private List<String>datanama=new ArrayList<>();
@@ -9,9 +12,7 @@ public class PersonGenerator {
     private List<String>datagender=new ArrayList<>();
     private String path;
 
-    public PersonGenerator(String path) {
-        this.path=path;
-    }
+    public PersonGenerator(String path) { this.path=path; }
     public void Readfile(){
         File file=new File(this.path);
         try {
@@ -55,10 +56,10 @@ public class PersonGenerator {
     }
     public void getAverageAge(){
         Integer total=0;
-        for (int i = 0; i <dataumur.size() ; i++) {
-            total+=dataumur.get(i);
+        for (Integer integer : dataumur) {
+            total += integer;
         }
-        Integer average=total/dataumur.size();
+        int average=total/dataumur.size();
         System.out.println("Rata Rata Umur :"+average);
     }
     public void getFriend(){
@@ -77,8 +78,6 @@ public class PersonGenerator {
             int Male=0;
             int Female=0;
             for (String str: stringList){
-                String getName=str.substring(7,30);
-                String getAge =str.substring(38,40);
                 String getGender=str.substring(48,49);
                 if (getGender.equals("L")){
                     Male++;
@@ -86,15 +85,16 @@ public class PersonGenerator {
             }
             System.out.println("Jumlah Teman Pria   :"+Male);
             System.out.println("Jumlah Teman Wanita :"+Female);
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
         } catch (IOException ex) {
             ex.printStackTrace();
         }
 
     }
-//    public void getTermudaTertua(){
-//
-//    }
+    public void getTermudaTertua(){
+        Object min=Collections.min(dataumur);
+        System.out.println("Umur Termuda :"+min);
+        Object max=Collections.max(dataumur);
+        System.out.println("Umur Tertua  :"+max);
+    }
 }
 
