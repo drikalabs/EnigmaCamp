@@ -1,0 +1,20 @@
+// siapa saja yang mengambil paket ke thailand //
+select customer.name , tour.package_name from booking 
+inner join customer on booking.id_customer = customer.id_customer 
+inner join tour on booking.id_package=tour.id_tour 
+where tour.package_name = 'Thailand';
+
+//siapa saja yang belum berangkat//
+select booking.flight_date ,customer.name from booking inner join customer on 
+booking.id_customer = customer.id_customer where current_date <= flight_date;
+
+//siapa saja yang berangkat dua minggu kedepan//
+select booking.flight_date, customer.name, booking.order_date from booking inner join customer 
+on booking.id_customer =customer.id_customer 
+where booking.flight_date >= booking.order_date + interval '14 day';
+
+//total pembayaran yang sudah berangkat//
+select sum(payment.total_payment) as payment_report from (booking inner join customer on
+booking.id_customer = customer.id_customer) 
+inner join payment on booking.id_booking = payment.id_booking 
+where booking.flight_date <= current_date ;
