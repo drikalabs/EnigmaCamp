@@ -9,7 +9,7 @@ import java.util.List;
 public class MainSearch {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("What you looking FOr :");
+        System.out.print("What are you looking For :");
         String keyword = bufferedReader.readLine();
         List<Student> students= StudentService.search(keyword);
         for (Student studen:students) {
