@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.enigma.model.Student" table="student">
+        <id name="id" column="id" type="int"></id>
+
+        <property name="name" column="name" type="string"/>
+        <property name="birthPlace" column="birth_place" type="string"/>
+        <property name="birthDate" column="birth_date" type="date"/>
+        <property name="gender" column="gender" type="string"/>
+        <property name="major" column="major" type="string"/>
+    </class>
+</hibernate-mapping>

@@ -4,24 +4,17 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 import java.util.Date;
+import java.util.List;
 
-public class Main {
+public class Main3 {
     public static void main(String[] args) {
         SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
-        //Session session = HibernateConfigs.getSessionFactory().getCurrentSession();
-        Student student =new Student();
-        student.setId(17);
-        student.setName("Crish Hamsword");
-        student.setBirthPlace("London");
-        student.setBirthDate(new Date(1995-8-02));
-        student.setGender("M");
-        student.setMajor("IS");
-
         session.beginTransaction();
-
-        session.save(student);
-
+        List students= session.createQuery("from com.enigma.model.Student").getResultList();
         session.getTransaction().commit();
+        for (Object student:students) {
+            System.out.println(student.toString());
+        }
     }
 }

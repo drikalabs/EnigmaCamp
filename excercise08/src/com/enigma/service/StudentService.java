@@ -8,13 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentService {
-    public static void create(Student student){
+    public static void create(Student student) {
         Connection connection = DBConnection.makeConnection();
         try {
-            Statement statement = connection.createStatement();
+            PreparedStatement statement = connection.prepareStatement("Insert into student(name,birth_place,birth_date,gender,major) " +
+                    "values(?,?,?,?,?)");
+            //example USING PREPARE STATEMENT
+            statement.setString(1,student.getName());
+            statement.setString(2,student.getBirthPlace());
+            statement.setDate(3, (Date) student.getBirthDate());
+            statement.setString(4,student.getGender());
+            statement.setString(5,student.getMajor());
+            statement.execute();
+            //example USING STATEMENT
+            /*Statement statement = connection.createStatement();
             statement.execute("insert into student(name,birth_place,birth_date,gender,major)" +
                     "values('"+student.getName()+"','"+student.getBirthPlace()+"','"+student.getBirthDate()+
-                    "','"+student.getGender()+"','"+student.getMajor()+"')");
+                    "','"+student.getGender()+"','"+student.getMajor()+"')");*/
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
