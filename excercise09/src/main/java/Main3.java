@@ -1,9 +1,7 @@
 import com.enigma.config.HibernateConfigs;
-import com.enigma.model.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import java.util.Date;
 import java.util.List;
 
 public class Main3 {
