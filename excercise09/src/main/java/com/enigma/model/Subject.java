@@ -1,9 +1,7 @@
 package com.enigma.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "subject")
@@ -14,6 +12,8 @@ public class Subject {
     private String subject;
     @Column(name = "sks")
     private Integer sks;
+    @OneToMany(mappedBy = "idSubject")
+    private Set<StudentSubject> studentSubjects;
 
     public Subject(Integer id, String subject, Integer sks) {
         this.id = id;
@@ -48,12 +48,21 @@ public class Subject {
         this.sks = sks;
     }
 
+    public Set<StudentSubject> getStudentSubjects() {
+        return studentSubjects;
+    }
+
+    public void setStudentSubjects(Set<StudentSubject> studentSubjects) {
+        this.studentSubjects = studentSubjects;
+    }
+
     @Override
     public String toString() {
         return "Subject{" +
                 "id=" + id +
                 ", subject='" + subject + '\'' +
                 ", sks=" + sks +
+                ", studentSubjects=" + studentSubjects +
                 '}';
     }
 }

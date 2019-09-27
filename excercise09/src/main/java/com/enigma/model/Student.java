@@ -2,6 +2,8 @@ package com.enigma.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Set;
+
 @Entity
 @Table(name = "student")
 public class Student {
@@ -22,6 +24,9 @@ public class Student {
     @ManyToOne
     @JoinColumn(name = "clasrom_id")
     private Room classromId;
+    @OneToMany(mappedBy = "idStudent")
+    private Set<StudentSubject>studentSubjects;
+
 
     public Student(Integer id, String name, String birthPlace, Date birthDate, String gender, String major) {
         this.id = id;
@@ -66,6 +71,14 @@ public class Student {
         return classromId;
     }
 
+    public Set<StudentSubject> getStudentSubjects() {
+        return studentSubjects;
+    }
+
+    public void setStudentSubjects(Set<StudentSubject> studentSubjects) {
+        this.studentSubjects = studentSubjects;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -75,7 +88,8 @@ public class Student {
                 ", birthDate=" + birthDate +
                 ", gender='" + gender + '\'' +
                 ", major='" + major + '\'' +
-                /*", classromId=" + classromId.getId() +*/
+                /*", classromId=" + classromId +*/
+                ", studentSubjects=" + studentSubjects +
                 '}';
     }
 }

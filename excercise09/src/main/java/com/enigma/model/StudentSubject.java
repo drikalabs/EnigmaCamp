@@ -1,9 +1,6 @@
 package com.enigma.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "studentsubject")
@@ -11,16 +8,18 @@ public class StudentSubject {
     @Id
     private Integer idStuSub;
 
-    @Column(name = "id_student")
-    private Integer idStudent;
+    @ManyToOne
+    @JoinColumn(name = "id_student")
+    private Student idStudent;
 
-    @Column(name = "id_subject")
-    private Integer isSubject;
+    @ManyToOne
+    @JoinColumn(name = "id_subject")
+    private Subject idSubject;
 
-    public StudentSubject(Integer idStuSub, Integer idStudent, Integer isSubject) {
+    public StudentSubject(Integer idStuSub, Student idStudent, Subject isSubject) {
         this.idStuSub = idStuSub;
         this.idStudent = idStudent;
-        this.isSubject = isSubject;
+        this.idSubject = isSubject;
     }
 
     public StudentSubject() {
@@ -34,28 +33,19 @@ public class StudentSubject {
         this.idStuSub = idStuSub;
     }
 
-    public Integer getIdStudent() {
+    public Student getIdStudent() {
         return idStudent;
     }
 
-    public void setIdStudent(Integer idStudent) {
+    public void setIdStudent(Student idStudent) {
         this.idStudent = idStudent;
     }
 
-    public Integer getIsSubject() {
-        return isSubject;
+    public Subject getIdSubject() {
+        return idSubject;
     }
 
-    public void setIsSubject(Integer isSubject) {
-        this.isSubject = isSubject;
-    }
-
-    @Override
-    public String toString() {
-        return "StudentSubject{" +
-                "idStuSub=" + idStuSub +
-                ", idStudent=" + idStudent +
-                ", isSubject=" + isSubject +
-                '}';
+    public void setIdSubject(Subject isSubject) {
+        this.idSubject = isSubject;
     }
 }
