@@ -48,4 +48,13 @@ public class StudentSubject {
     public void setIdSubject(Subject isSubject) {
         this.idSubject = isSubject;
     }
+
+    @Override
+    public String toString() {
+        return "StudentSubject{" +
+                "idStuSub=" + idStuSub +
+                ", idStudent=" + idStudent.getId() +
+                ", idSubject=" + idSubject.getId() +
+                '}';
+    }
 }

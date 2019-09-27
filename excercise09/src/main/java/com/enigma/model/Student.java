@@ -2,6 +2,7 @@ package com.enigma.model;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -25,7 +26,7 @@ public class Student {
     @JoinColumn(name = "clasrom_id")
     private Room classromId;
     @OneToMany(mappedBy = "idStudent")
-    private Set<StudentSubject>studentSubjects;
+    private List<StudentSubject> studentSubjects;
 
 
     public Student(Integer id, String name, String birthPlace, Date birthDate, String gender, String major) {
@@ -71,11 +72,11 @@ public class Student {
         return classromId;
     }
 
-    public Set<StudentSubject> getStudentSubjects() {
+    public List<StudentSubject> getStudentSubjects() {
         return studentSubjects;
     }
 
-    public void setStudentSubjects(Set<StudentSubject> studentSubjects) {
+    public void setStudentSubjects(List<StudentSubject> studentSubjects) {
         this.studentSubjects = studentSubjects;
     }
 

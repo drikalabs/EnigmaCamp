@@ -1,6 +1,7 @@
 package com.enigma.model;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -13,7 +14,7 @@ public class Subject {
     @Column(name = "sks")
     private Integer sks;
     @OneToMany(mappedBy = "idSubject")
-    private Set<StudentSubject> studentSubjects;
+    private List<StudentSubject> studentSubjects;
 
     public Subject(Integer id, String subject, Integer sks) {
         this.id = id;
@@ -48,11 +49,11 @@ public class Subject {
         this.sks = sks;
     }
 
-    public Set<StudentSubject> getStudentSubjects() {
+    public List<StudentSubject> getStudentSubjects() {
         return studentSubjects;
     }
 
-    public void setStudentSubjects(Set<StudentSubject> studentSubjects) {
+    public void setStudentSubjects(List<StudentSubject> studentSubjects) {
         this.studentSubjects = studentSubjects;
     }
 

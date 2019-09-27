@@ -5,18 +5,24 @@ import com.enigma.model.Subject;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import java.util.List;
+import java.util.Set;
+
 public class StudentSubjectMain {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session =sessionFactory.getCurrentSession();
         session.beginTransaction();
 
-        Student student = (Student) session.get(Student.class, 1);
-        Subject subject = (Subject) session.get(Subject.class, 1);
+        Student student = session.get(Student.class, 1);
+        List<StudentSubject> studentSubjects = student.getStudentSubjects();
+        for (StudentSubject stud:studentSubjects) {
+            stud.getIdStudent();
+            stud.getIdSubject();
+            stud.toString();
 
-        StudentSubject stusub =new StudentSubject();
-        stusub.setIdStudent(student);
-        stusub.setIdSubject(subject);
+        }
+
 
         session.getTransaction().commit();
         session.close();
