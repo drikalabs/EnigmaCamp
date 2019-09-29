@@ -19,7 +19,7 @@ public class StudentSubjectMain {
         for (StudentSubject stud:studentSubjects) {
             stud.getIdStudent();
             stud.getIdSubject();
-            stud.toString();
+            System.out.println(stud.toString());
 
         }
 
