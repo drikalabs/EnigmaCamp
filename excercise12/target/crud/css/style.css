@@ -1,0 +1,118 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: #83ebf1;
+    color: #fff;
+    text-align: center;
+    height: 70px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sidenav{
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    background-color: #83ebf1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav li{
+    list-style: none;
+}
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+}
+.sidenav a:hover{
+    background-color: #fff;
+    color: #83ebf1;
+}
+.main {
+    margin-top: 100px;
+    margin-left: 20%;
+    font-size: 28px;
+    padding: 0px 10px;
+}
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+    font-size: 17pt;
+}
+
+tr:nth-child(even) {
+    background-color:#dffafc;
+}
+button {
+    background-color:#83ebf1;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color:#fff;
+    color:#83ebf1;
+}
+.container {
+    padding: 16px;
+    background-color: white;
+    font-size: 15pt;
+}
+.container .btn{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    background-color:#83ebf1;
+    color:#fff;
+}
+
+/* Full-width input fields */
+input{
+    width: 98%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.container select{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.container button{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.profile{
+    text-align: center;
+}
+.profile table{
+    margin: 10px;
+    width: 98%;
+}

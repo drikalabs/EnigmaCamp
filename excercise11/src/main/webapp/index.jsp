@@ -9,8 +9,8 @@
         <h1>Enigma Academy</h1>
     </header>
     <div class="sidenav">
-        <li><a href="#">Data</a></li>
-        <li><a href="#">Input</a></li>
+        <li><a href="data">Data</a></li>
+        <li><a href="helo?name=Duarrrrrrr">Input</a></li>
     </div>
     <div class="main container">
         <form method="post" action="robot">

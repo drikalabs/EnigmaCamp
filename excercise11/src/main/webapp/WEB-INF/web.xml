@@ -2,7 +2,10 @@
         "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd"
+         version="2.4">
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
@@ -17,7 +20,15 @@
     <servlet-name>Robot</servlet-name>
     <servlet-class>com.enigma.RobotMovement</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>com.enigma.StudentServlet</servlet-class>
+  </servlet>
 
+  <servlet-mapping>
+  <servlet-name>StudentServlet</servlet-name>
+  <url-pattern>/data</url-pattern>
+</servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
