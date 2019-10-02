@@ -1,0 +1,4 @@
+#ignore all folder target
+target/
+#ignore all file .war
+*.war
