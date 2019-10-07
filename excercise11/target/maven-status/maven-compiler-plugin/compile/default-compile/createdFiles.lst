@@ -1,8 +1,8 @@
-com\enigma\model\Direction.class
-com\enigma\ApaKabar.class
-com\enigma\Hello.class
-com\enigma\config\HibernateConfigs.class
-com\enigma\RobotMovement.class
-com\enigma\StudentServlet.class
-com\enigma\model\Robot.class
-com\enigma\model\Student.class
+com/enigma/Hello.class
+com/enigma/config/HibernateConfigs.class
+com/enigma/StudentServlet.class
+com/enigma/RobotMovement.class
+com/enigma/model/Student.class
+com/enigma/model/Direction.class
+com/enigma/model/Robot.class
+com/enigma/ApaKabar.class
