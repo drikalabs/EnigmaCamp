@@ -12,7 +12,10 @@
 	<artifactId>excercise14</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>excercise14</name>
+<<<<<<< HEAD
 	<packaging>war</packaging>
+=======
+>>>>>>> d195971cfa354a638d9e3d4a878093c06c003622
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -24,16 +27,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+=======
+>>>>>>> d195971cfa354a638d9e3d4a878093c06c003622
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -51,6 +58,8 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
+=======
+>>>>>>> d195971cfa354a638d9e3d4a878093c06c003622
 	</dependencies>
 
 	<build>
