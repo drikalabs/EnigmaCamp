@@ -18,24 +18,27 @@ public class SubjectService {
         session.getTransaction().commit();
         session.close();
     }
-    public static List<Subject> getAll(){
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+
+    public static List<Subject> getAll() {
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List subject= session.createQuery("from com.enigma.model.Subject").getResultList();
+        List subject = session.createQuery("from com.enigma.model.Subject").getResultList();
         session.getTransaction().commit();
         session.close();
         return subject;
     }
-    public  static List<Subject>getById(Integer id){
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+
+    public static List<Subject> getById(Integer id) {
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List subject= session.createQuery("from com.enigma.model.Subject where id ="+id+"").getResultList();
+        List subject = session.createQuery("from com.enigma.model.Subject where id =" + id + "").getResultList();
         session.getTransaction().commit();
         session.close();
         return subject;
     }
+
     public static void update(Subject subject) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -44,7 +47,8 @@ public class SubjectService {
         session.getTransaction().commit();
         session.close();
     }
-    public static void deleteByid(Integer id){
+
+    public static void deleteByid(Integer id) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         Subject deleteSubject = new Subject();

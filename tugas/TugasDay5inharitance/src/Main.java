@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader take =new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader take = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("Masukkan Nama Hero :");
         String name = take.readLine();
 
@@ -25,7 +25,7 @@ public class Main {
                 Double.parseDouble(mp),
                 Double.parseDouble(basicdamage),
                 Double.parseDouble(basicdeff),
-                name,role);
+                name, role);
         //System.out.println(myhero.print());
 //        myhero.doBalancingRole(role);
         myhero.showStatuslv1();

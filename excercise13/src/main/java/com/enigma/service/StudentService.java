@@ -8,11 +8,13 @@ import java.util.List;
 
 @Service
 public class StudentService {
-    List<Student> students= new ArrayList<>();
-    public void save(Student student){
+    List<Student> students = new ArrayList<>();
+
+    public void save(Student student) {
         students.add(student);
     }
-    public List<Student> getAll(){
+
+    public List<Student> getAll() {
         return this.students;
     }
 

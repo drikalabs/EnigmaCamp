@@ -6,17 +6,17 @@ import java.io.IOException;
 public class Main6 {
 
     public static void main(String[] args) {
-        File fileku =new File("D:\\Academy\\excercise06\\data.txt");
+        File fileku = new File("D:\\Academy\\excercise06\\data.txt");
         try {
-            FileReader fileReader =new FileReader(fileku);
-            boolean eof =false;
-            while (!eof){
-                int c =fileReader.read();
-                if (c==-1){
-                    eof=true;
+            FileReader fileReader = new FileReader(fileku);
+            boolean eof = false;
+            while (!eof) {
+                int c = fileReader.read();
+                if (c == -1) {
+                    eof = true;
                     break;
                 }
-                System.out.print(c==10?"*":String.valueOf((char)c));
+                System.out.print(c == 10 ? "*" : String.valueOf((char) c));
             }
 
         } catch (FileNotFoundException e) {

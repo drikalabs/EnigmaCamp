@@ -8,11 +8,11 @@ import java.util.List;
 
 public class StudentById {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Masukkan Id Yang dicari :");
-        Integer cari =Integer.parseInt(bufferedReader.readLine());
+        Integer cari = Integer.parseInt(bufferedReader.readLine());
         List<Student> students = StudentService.getById(cari);
-        for (Student student:students) {
+        for (Student student : students) {
             System.out.println(student.toString());
         }
     }

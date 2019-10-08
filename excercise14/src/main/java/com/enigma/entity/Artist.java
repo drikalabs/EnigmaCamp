@@ -5,12 +5,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
+
 @Entity
 public class Artist {
     @Id
     private Integer idArtist;
     private String name;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "yyyy-mm-dd")
     private Date debuteDate;
     private String bornPlace;
 

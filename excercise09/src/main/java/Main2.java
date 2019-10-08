@@ -7,10 +7,10 @@ import java.util.Date;
 
 public class Main2 {
     public static void main(String[] args) {
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        Student student=session.get(Student.class ,17);
+        Student student = session.get(Student.class, 17);
         session.getTransaction().commit();
         System.out.println(student.toString());
     }

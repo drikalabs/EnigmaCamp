@@ -15,10 +15,10 @@
 <h1>ini student</h1>
 <table>
     <c:forEach items="${send}" var="data">
-    <tr>
-        <td><c:out value="${data.idStudent}"/></td>
-        <td><c:out value="${data.name}"/></td>
-    </tr>
+        <tr>
+            <td><c:out value="${data.idStudent}"/></td>
+            <td><c:out value="${data.name}"/></td>
+        </tr>
     </c:forEach>
 </table>
 </body>

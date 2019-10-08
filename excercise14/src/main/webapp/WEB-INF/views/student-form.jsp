@@ -15,10 +15,10 @@
 <body>
 <h1>Ini FORM</h1>
 <data:form modelAttribute="student" method="post" action="student">
-    <data:input path="idStudent" />
+    <data:input path="idStudent"/>
     <data:input path="name"/>
     <data:input path="birthPlace"/>
-   <%-- <data:input path="birthDate"/>--%>
+    <%-- <data:input path="birthDate"/>--%>
     <data:input path="gender"/>
     <data:input path="major"/>
     <input type="submit">

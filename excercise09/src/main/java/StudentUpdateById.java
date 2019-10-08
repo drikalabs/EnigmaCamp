@@ -14,14 +14,14 @@ public class StudentUpdateById {
         System.out.print("Name :");
         String name = bufferedReader.readLine();
         System.out.print("Birth Place :");
-        String brithplace =bufferedReader.readLine();
+        String brithplace = bufferedReader.readLine();
         System.out.print("Birth Date :");
         Date date = Date.valueOf(bufferedReader.readLine());
         System.out.print("Gender :");
         String gender = bufferedReader.readLine();
         System.out.print("Major :");
-        String major =bufferedReader.readLine();
-        Student student = new Student(id,name,brithplace,date,gender,major);
+        String major = bufferedReader.readLine();
+        Student student = new Student(id, name, brithplace, date, gender, major);
         StudentService.update(student);
     }
 }

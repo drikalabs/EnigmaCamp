@@ -11,8 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>INI INDEX</h1>
-    <a href="student"> ke student</a>
-    <a href="student-form"> ke student form</a>
+<h1>INI INDEX</h1>
+<a href="student"> ke student</a>
+<a href="student-form"> ke student form</a>
 </body>
 </html>

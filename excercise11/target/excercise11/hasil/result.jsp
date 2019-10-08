@@ -11,7 +11,8 @@
     <title>result</title>
 </head>
 <body>
-<% String result =(String) request.getAttribute("result"); %>
-<h1>Hasilnya:<%=result %></h1>
+<% String result = (String) request.getAttribute("result"); %>
+<h1>Hasilnya:<%=result %>
+</h1>
 </body>
 </html>

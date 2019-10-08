@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Student {
-    private  Integer idStudent;
+    private Integer idStudent;
     private String name;
     private String birthPlace;
     private Date birthDate;

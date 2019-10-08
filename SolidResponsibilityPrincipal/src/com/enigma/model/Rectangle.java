@@ -1,6 +1,6 @@
 package com.enigma.model;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
     protected Double length;
     protected Double width;
 
@@ -9,8 +9,9 @@ public class Rectangle extends Shape{
         this.length = length;
         this.width = width;
     }
-    public Double getSurface(){
-        return length*width;
+
+    public Double getSurface() {
+        return length * width;
     }
 
     public Double getLength() {

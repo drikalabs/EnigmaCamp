@@ -6,40 +6,40 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_4.xsd"
          version="2.4">
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
-    <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>com.enigma.Hello</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>HelloServlet2</servlet-name>
-    <servlet-class>com.enigma.ApaKabar</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>Robot</servlet-name>
-    <servlet-class>com.enigma.RobotMovement</servlet-class>
-  </servlet>
-  <servlet>
-    <servlet-name>StudentServlet</servlet-name>
-    <servlet-class>com.enigma.StudentServlet</servlet-class>
-  </servlet>
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.enigma.Hello</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloServlet2</servlet-name>
+        <servlet-class>com.enigma.ApaKabar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Robot</servlet-name>
+        <servlet-class>com.enigma.RobotMovement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.enigma.StudentServlet</servlet-class>
+    </servlet>
 
-  <servlet-mapping>
-  <servlet-name>StudentServlet</servlet-name>
-  <url-pattern>/data</url-pattern>
-</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
 
-  <servlet-mapping>
-    <servlet-name>HelloServlet</servlet-name>
-    <url-pattern>/helo</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>HelloServlet2</servlet-name>
-    <url-pattern>/pakabar</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Robot</servlet-name>
-    <url-pattern>/robot</url-pattern>
-  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/helo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HelloServlet2</servlet-name>
+        <url-pattern>/pakabar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Robot</servlet-name>
+        <url-pattern>/robot</url-pattern>
+    </servlet-mapping>
 </web-app>

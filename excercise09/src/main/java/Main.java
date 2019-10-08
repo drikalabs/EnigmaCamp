@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         //Session session = HibernateConfigs.getSessionFactory().getCurrentSession();
 //        Student student =new Student();

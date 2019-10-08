@@ -16,12 +16,12 @@ public class StudentServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        SessionFactory sessionFactory= HibernateConfigs.getSessionFactory();
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List <Student>students= session.createQuery("from com.enigma.model.Student").getResultList();
+        List<Student> students = session.createQuery("from com.enigma.model.Student").getResultList();
         session.getTransaction().commit();
-        req.setAttribute("students",students);
-        req.getRequestDispatcher("student/student-list.jsp").forward(req,resp);
+        req.setAttribute("students", students);
+        req.getRequestDispatcher("student/student-list.jsp").forward(req, resp);
     }
 }

@@ -11,12 +11,12 @@ import java.util.Set;
 public class StudentSubjectMain {
     public static void main(String[] args) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
-        Session session =sessionFactory.getCurrentSession();
+        Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
 
         Student student = session.get(Student.class, 1);
         List<StudentSubject> studentSubjects = student.getStudentSubjects();
-        for (StudentSubject stud:studentSubjects) {
+        for (StudentSubject stud : studentSubjects) {
             stud.getIdStudent();
             stud.getIdSubject();
             System.out.println(stud.toString());

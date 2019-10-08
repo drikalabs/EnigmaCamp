@@ -4,8 +4,9 @@ import java.util.Objects;
 
 public class Friend {
     String friend;
-    public  Friend(String friends){
-        this.friend=friends;
+
+    public Friend(String friends) {
+        this.friend = friends;
     }
 
     @Override

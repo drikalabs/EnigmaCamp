@@ -9,26 +9,49 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Title</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-<h1>Ini Artist</h1>
-<a href="artist-form"> tambah Artist</a>
-<table border="1">
-<tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Debute date</th>
-    <th>from</th>
-</tr>
-    <c:forEach items="${artistlist}" var="dataArtist">
-    <tr>
-        <td><c:out value="${dataArtist.idArtist}"/></td>
-        <td><c:out value="${dataArtist.name}"/></td>
-        <td><c:out value="${dataArtist.debuteDate}"/></td>
-        <td><c:out value="${dataArtist.bornPlace}"/></td>
-    </tr>
-    </c:forEach>
-</table>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+<div class="container">
+    <a href="artist-form" class="btn btn-primary"> tambah Artist</a>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Debute date</th>
+            <th>From</th>
+            <th>Action</th>
+        </tr>
+        <c:forEach items="${artistlist}" var="dataArtist">
+            <tr>
+                <td><c:out value="${dataArtist.idArtist}"/></td>
+                <td><c:out value="${dataArtist.name}"/></td>
+                <td><c:out value="${dataArtist.debuteDate}"/></td>
+                <td><c:out value="${dataArtist.bornPlace}"/></td>
+                <td><a href="detail?idArtist=${dataArtist.idArtist}" class="btn btn-primary">Detil</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
 </body>
 </html>

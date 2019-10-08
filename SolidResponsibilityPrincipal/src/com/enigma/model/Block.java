@@ -8,7 +8,7 @@ public class Block extends Rectangle {
         this.heihgt = heihgt;
     }
 
-    public Double getVolume(){
-        return getSurface()*this.heihgt;
+    public Double getVolume() {
+        return getSurface() * this.heihgt;
     }
 }

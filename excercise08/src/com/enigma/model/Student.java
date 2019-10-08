@@ -10,15 +10,14 @@ public class Student {
     private String gender;
     private String major;
 
-    public Student(String name, String birthPlace, Date birthDate, String gender ,String major) {
+    public Student(String name, String birthPlace, Date birthDate, String gender, String major) {
         //this.id = id;
         this.name = name;
         this.birthPlace = birthPlace;
         this.birthDate = birthDate;
         this.gender = gender;
-        this.major =major;
+        this.major = major;
     }
-
 
 
     public String getName() {
@@ -67,6 +66,6 @@ public class Student {
                 "| birthPlace='" + birthPlace + '\'' +
                 "| birthDate=" + birthDate +
                 "| gender='" + gender + '\'' +
-                "| major='" + major + '\'' +"|";
+                "| major='" + major + '\'' + "|";
     }
 }

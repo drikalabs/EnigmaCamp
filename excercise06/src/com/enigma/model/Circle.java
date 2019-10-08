@@ -1,19 +1,27 @@
 package com.enigma.model;
+
 import java.util.Objects;
 
 public class Circle {
-    protected final Double pi=3.14;
+    protected final Double pi = 3.14;
     protected Integer r;
-    public Circle(Integer r){ this.r=r; }
-    public void showCompare(){
+
+    public Circle(Integer r) {
+        this.r = r;
+    }
+
+    public void showCompare() {
         System.out.println(this.r);
     }
-    public  Double getSurface(){
-        return pi*r*r;
+
+    public Double getSurface() {
+        return pi * r * r;
     }
-    public Double getRound(){
-        return pi*r*2;
+
+    public Double getRound() {
+        return pi * r * 2;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,13 +29,16 @@ public class Circle {
         Circle circle = (Circle) o;
         return Objects.equals(r, circle.r);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(r);
     }
+
     public Integer getR() {
         return r;
     }
+
     public void setR(Integer r) {
         this.r = r;
     }

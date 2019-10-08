@@ -14,10 +14,10 @@
     </div>
     <div class="main container">
         <form method="post" action="robot">
-            <label ><b>Setup</b></label>
+            <label><b>Setup</b></label>
             <input type="text" placeholder="Enter Direction" name="setup" required>
 
-            <label ><b>Battery</b></label>
+            <label><b>Battery</b></label>
             <input type="text" placeholder="Enter Value" name="fuels" required>
 
             <label><b>Movement</b></label>

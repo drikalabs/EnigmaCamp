@@ -1,4 +1,4 @@
 package com.enigma.model;
 
-public class Intelegence  {
+public class Intelegence {
 }

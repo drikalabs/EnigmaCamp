@@ -11,8 +11,8 @@ public class MainSearch {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("What are you looking For :");
         String keyword = bufferedReader.readLine();
-        List<Student> students= StudentService.search(keyword);
-        for (Student studen:students) {
+        List<Student> students = StudentService.search(keyword);
+        for (Student studen : students) {
             System.out.println(studen.toString());
         }
 

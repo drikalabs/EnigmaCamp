@@ -16,24 +16,27 @@ public class StudentDao {
         session.getTransaction().commit();
         session.close();
     }
-    public static List<Student> getAll(){
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+
+    public static List<Student> getAll() {
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List students= session.createQuery("from com.enigma.model.Student").getResultList();
+        List students = session.createQuery("from com.enigma.model.Student").getResultList();
         session.getTransaction().commit();
         session.close();
         return students;
     }
-    public  static List<Student>getById(Integer id){
-        SessionFactory sessionFactory =HibernateConfigs.getSessionFactory();
+
+    public static List<Student> getById(Integer id) {
+        SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         session.beginTransaction();
-        List students= session.createQuery("from com.enigma.model.Student where id ="+id+"").getResultList();
+        List students = session.createQuery("from com.enigma.model.Student where id =" + id + "").getResultList();
         session.getTransaction().commit();
         session.close();
         return students;
     }
+
     public static void update(Student student) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
@@ -42,7 +45,8 @@ public class StudentDao {
         session.getTransaction().commit();
         session.close();
     }
-    public static void deleteByid(Integer id){
+
+    public static void deleteByid(Integer id) {
         SessionFactory sessionFactory = HibernateConfigs.getSessionFactory();
         Session session = sessionFactory.getCurrentSession();
         Student deleteStudent = new Student();

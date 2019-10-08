@@ -13,10 +13,10 @@ public class StudentService {
     /*public StudentService(StudentDao studentDao) {
             this.studentDao = studentDao;
         }*/
-    public  Integer countMale(){
-        Integer count=0;
-        for (Student student :studentDao.getAll()){
-            if (student.getGender().equals(Constanta.MALE)){
+    public Integer countMale() {
+        Integer count = 0;
+        for (Student student : studentDao.getAll()) {
+            if (student.getGender().equals(Constanta.MALE)) {
                 count++;
             }
         }

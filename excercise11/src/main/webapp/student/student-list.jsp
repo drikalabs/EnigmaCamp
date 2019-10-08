@@ -22,10 +22,10 @@
     <li><a href="data">Data</a></li>
     <li><a href="#">Input</a></li>
 </div>--%>
-    <c:forEach items="${requestScope.students}" var="students">
-        <h1><c:out value="${students.name}"></h1>
-    </c:out>
-    </c:forEach>
+<c:forEach items="${requestScope.students}" var="students">
+    <h1><c:out value="${students.name}"></h1>
+</c:out>
+</c:forEach>
 
 <%--<div class="main">
     <% List<Student> result= (List<Student>) request.getAttribute("students");%>

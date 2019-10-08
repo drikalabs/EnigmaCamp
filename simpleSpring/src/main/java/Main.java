@@ -8,21 +8,21 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        ApplicationContext context= new ClassPathXmlApplicationContext(
+        ApplicationContext context = new ClassPathXmlApplicationContext(
                 "aplicationContext.xml");
 
-        Student tony =new Student(1,"Tony","Jakarta",new Date(),"M","IT");
-        Student dani =new Student(2,"dani","Jakarta",new Date(),"M","IT");
-        Student dedi =new Student(3,"dedi","Jakarta",new Date(),"M","IT");
-        Student Dono =new Student(4,"dono","Jakarta",new Date(),"M","IT");
-        Student sarah =new Student(5,"Sarah","Jakarta",new Date(),"F","IT");
-        StudentDao studentDao= (StudentDao) context.getBean("studentDao");
+        Student tony = new Student(1, "Tony", "Jakarta", new Date(), "M", "IT");
+        Student dani = new Student(2, "dani", "Jakarta", new Date(), "M", "IT");
+        Student dedi = new Student(3, "dedi", "Jakarta", new Date(), "M", "IT");
+        Student Dono = new Student(4, "dono", "Jakarta", new Date(), "M", "IT");
+        Student sarah = new Student(5, "Sarah", "Jakarta", new Date(), "F", "IT");
+        StudentDao studentDao = (StudentDao) context.getBean("studentDao");
         studentDao.save(tony);
         studentDao.save(dani);
         studentDao.save(dedi);
         studentDao.save(Dono);
         studentDao.save(sarah);
-        StudentService studentService=(StudentService) context.getBean("studentService");
+        StudentService studentService = (StudentService) context.getBean("studentService");
         System.out.println(studentService.countMale());
 
        /* StudentDao studentDao=new StudentDao();

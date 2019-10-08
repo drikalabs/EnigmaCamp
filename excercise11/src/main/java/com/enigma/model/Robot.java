@@ -3,7 +3,7 @@ package com.enigma.model;
 public class Robot {
     private Integer posX;
     private Integer posY;
-    private Integer batery=0;
+    private Integer batery = 0;
     Direction Direction;
     private final String TURNRIGHT = "R";
     private final String TURNLEFT = "L";
@@ -16,12 +16,20 @@ public class Robot {
         this.posY = y;
         this.Direction = dir;
     }
-    public  Integer addBatrei(Integer batery){
+
+    public Integer addBatrei(Integer batery) {
         return this.batery = this.batery + batery;
     }
-    public void turnRighr() {this.Direction =this.Direction.turnRight();}
-    public void turnLeft() {this.Direction =this.Direction.turnLeft(); }
-    public void FORWARD(){
+
+    public void turnRighr() {
+        this.Direction = this.Direction.turnRight();
+    }
+
+    public void turnLeft() {
+        this.Direction = this.Direction.turnLeft();
+    }
+
+    public void FORWARD() {
         if (Direction.equals(Direction.NORT)) {
             this.posY++;
         } else if (Direction.equals(Direction.EAST)) {
@@ -34,7 +42,8 @@ public class Robot {
             System.out.println("Wrong Direction !!");
         }
     }
-    public void BACKWARD(){
+
+    public void BACKWARD() {
         if (Direction.equals(Direction.NORT)) {
             this.posY++;
         } else if (Direction.equals(Direction.EAST)) {
@@ -47,17 +56,19 @@ public class Robot {
             System.out.println("Wrong Direction !!");
         }
     }
+
     private void move(String movement) {
-        if (movement.equals(TURNRIGHT)){
+        if (movement.equals(TURNRIGHT)) {
             turnRighr();
-        }else if (movement.equals(TURNLEFT)){
+        } else if (movement.equals(TURNLEFT)) {
             turnLeft();
-        }else if(movement.equals(FORWARD)){
+        } else if (movement.equals(FORWARD)) {
             FORWARD();
-        }else if(movement.equals(BACKWARD)){
+        } else if (movement.equals(BACKWARD)) {
             BACKWARD();
         }
     }
+
     public String setCommands(String commands) {
         this.commands = commands.toUpperCase().toCharArray();
         return commands;
@@ -65,19 +76,22 @@ public class Robot {
 
     public void Run() {
         for (int i = 0; i < this.commands.length; i++) {
-            if (this.batery ==0){
+            if (this.batery == 0) {
                 System.out.println("batrei empty");
                 break;
             }
             move(String.valueOf(commands[i]));
             System.out.println(getPosition());
-            if ((i+1)%3==0){
-                this.batery -=1;
+            if ((i + 1) % 3 == 0) {
+                this.batery -= 1;
             }
         }
 
     }
-    private String getPosition() {return "(" + this.posX + "," + this.posY + ") Direction :"+this.Direction+""; }
+
+    private String getPosition() {
+        return "(" + this.posX + "," + this.posY + ") Direction :" + this.Direction + "";
+    }
 
 
     public String print() {

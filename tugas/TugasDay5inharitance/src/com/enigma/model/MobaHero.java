@@ -6,14 +6,14 @@ public class MobaHero {
     protected Double basicDamage;
     protected Double basicDefends;
     protected String heroName;
-    protected final Double maxlevel=15.0;
-    protected final Double growth=5.0/100.00;
+    protected final Double maxlevel = 15.0;
+    protected final Double growth = 5.0 / 100.00;
 
-    public MobaHero(Double hp, Double mana,Double basicDamage,Double basicDefends, String heroName) {
+    public MobaHero(Double hp, Double mana, Double basicDamage, Double basicDefends, String heroName) {
         this.HP = hp;
         this.Mana = mana;
         this.basicDamage = basicDamage;
-        this.basicDefends= basicDefends;
+        this.basicDefends = basicDefends;
         this.heroName = heroName;
     }
 }

@@ -6,26 +6,30 @@ import java.util.Set;
 
 class ParkingArea {
     private Integer maxSpace;
-    private Set<Car> carSlot=new HashSet<Car>();
+    private Set<Car> carSlot = new HashSet<Car>();
     private Integer mintime;
     private Integer maxtime;
 
     ParkingArea(Integer maximumSlot, Integer mintime, Integer maxtime) {
-        this.maxSpace=maximumSlot;this.mintime=mintime;this.maxtime=maxtime;
+        this.maxSpace = maximumSlot;
+        this.mintime = mintime;
+        this.maxtime = maxtime;
     }
 
     Integer countAvaliablespace() {
-        return this.maxSpace-carSlot.size();
+        return this.maxSpace - carSlot.size();
     }
 
     void entryCar(Car mycar) {
         carSlot.add(mycar);
     }
-    boolean getDecision(){
-        if (this.maxSpace.equals(carSlot.size())){
+
+    boolean getDecision() {
+        if (this.maxSpace.equals(carSlot.size())) {
             return true;
-        }else return carSlot.size() <= this.maxSpace;
+        } else return carSlot.size() <= this.maxSpace;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -49,9 +53,11 @@ class ParkingArea {
     }
 
     boolean checkTime(Car mycar) {
-        if (mycar.getTimeEntry()<=mintime &&mycar.getTimeEntry()>=maxtime){
+        if (mycar.getTimeEntry() <= mintime && mycar.getTimeEntry() >= maxtime) {
             return true;
-        }else {return false;}
+        } else {
+            return false;
+        }
     }
 
     public void carOut(Car mycar2) {

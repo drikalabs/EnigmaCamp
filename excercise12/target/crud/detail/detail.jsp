@@ -14,32 +14,39 @@
 </head>
 <body class="profile">
 <table border="1" style="border-spacing: 0px">
-    <%List<Student> result= (List<Student>) request.getAttribute("detail");
-    for (Student data :result){
+    <%
+        List<Student> result = (List<Student>) request.getAttribute("detail");
+        for (Student data : result) {
     %>
     <tr>
         <td>Nama</td>
-        <td><%=data.getName()%></td>
+        <td><%=data.getName()%>
+        </td>
     </tr>
     <tr>
         <td>Birth Place</td>
-        <td><%=data.getBirthPlace()%></td>
+        <td><%=data.getBirthPlace()%>
+        </td>
     </tr>
     <tr>
         <td>Birth Date</td>
-        <td><%=data.getBirthDate()%></td>
+        <td><%=data.getBirthDate()%>
+        </td>
     </tr>
     <tr>
         <td>Gender</td>
-        <td><%=data.getGender()%></td>
+        <td><%=data.getGender()%>
+        </td>
     </tr>
     <tr>
         <td>Major</td>
-        <td><%=data.getMajor()%></td>
+        <td><%=data.getMajor()%>
+        </td>
     </tr>
     <%}%>
 </table>
 <a href="data">
-    <button>Back</button></a>
+    <button>Back</button>
+</a>
 </body>
 </html>

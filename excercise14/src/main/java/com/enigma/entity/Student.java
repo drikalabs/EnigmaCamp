@@ -5,17 +5,18 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
+
 @Entity
 public class Student {
     @Id
-   private Integer idStudent;
-   private String name;
-   private String birthPlace;
+    private Integer idStudent;
+    private String name;
+    private String birthPlace;
 
-   @DateTimeFormat(pattern = "dd/MM/yyyy")
-   private Date birthDate;
-   private String gender;
-   private String major;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    private Date birthDate;
+    private String gender;
+    private String major;
 
     public Student() {
     }

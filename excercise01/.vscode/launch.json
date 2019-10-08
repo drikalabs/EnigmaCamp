@@ -1,16 +1,16 @@
 {
-    "configurations": [
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Coba",
-            "request": "launch",
-            "mainClass": "Coba"
-        },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - Retrn",
-            "request": "launch",
-            "mainClass": "Retrn"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Coba",
+      "request": "launch",
+      "mainClass": "Coba"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Retrn",
+      "request": "launch",
+      "mainClass": "Retrn"
+    }
+  ]
 }

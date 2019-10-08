@@ -5,8 +5,10 @@ import java.util.Objects;
 class Car {
     private String platnomor;
     private Integer timeEntry;
-    Car(String platnomor,Integer timeEntry) {
-        this.platnomor=platnomor;this.timeEntry=timeEntry;
+
+    Car(String platnomor, Integer timeEntry) {
+        this.platnomor = platnomor;
+        this.timeEntry = timeEntry;
     }
 
     @Override

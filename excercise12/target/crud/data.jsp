@@ -22,7 +22,7 @@
     <li><a href="insert.jsp">Input</a></li>
 </div>
 <div class="main">
-    <% List<Student> result= (List<Student>) request.getAttribute("students");%>
+    <% List<Student> result = (List<Student>) request.getAttribute("students");%>
     <table>
         <tr>
             <th>No</th>
@@ -30,12 +30,17 @@
             <th>Birth Place</th>
             <th>Action</th>
         </tr>
-        <% for (Student data:result) {%>
+        <% for (Student data : result) {%>
         <tr>
-            <td><%=data.getId()%></td>
-            <td><%=data.getName()%></td>
-            <td><%=data.getBirthPlace()%></td>
-            <td><a href="detail?id=<%=data.getId()%>"><button>Detail</button></a></td>
+            <td><%=data.getId()%>
+            </td>
+            <td><%=data.getName()%>
+            </td>
+            <td><%=data.getBirthPlace()%>
+            </td>
+            <td><a href="detail?id=<%=data.getId()%>">
+                <button>Detail</button>
+            </a></td>
         </tr>
         <%}%>
     </table>
