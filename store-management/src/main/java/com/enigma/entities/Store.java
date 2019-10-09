@@ -3,19 +3,20 @@ package com.enigma.entities;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "mst_store")
 public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator="sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator",sequenceName = "seq_mst_store",allocationSize = 1)
-    private Integer idWarung;
+    private Integer id;
 
     private String storeName;
     private String address;
     private String description;
     private String phoneNumber;
 
-    public Store(Integer idWarung, String storeName, String address, String description, String phoneNumber) {
-        this.idWarung = idWarung;
+    public Store(Integer id, String storeName, String address, String description, String phoneNumber) {
+        this.id = id;
         this.storeName = storeName;
         this.address = address;
         this.description = description;
@@ -25,12 +26,12 @@ public class Store {
     public Store() {
     }
 
-    public Integer getIdWarung() {
-        return idWarung;
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdWarung(Integer idWarung) {
-        this.idWarung = idWarung;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getStoreName() {
