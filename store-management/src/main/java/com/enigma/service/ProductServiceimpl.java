@@ -1,7 +1,6 @@
 package com.enigma.service;
 
 import com.enigma.entities.Product;
-import com.enigma.entities.Purchased;
 import com.enigma.repositories.ProductRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +34,7 @@ public class ProductServiceimpl implements ProductService {
     public void deduct(String idProduct, Integer quantity) {
         Product product=getProductById(idProduct);
         product.deductQuantity(quantity);
+        product.getQuantity();
         saveProduct(product);
 
     }
@@ -42,5 +42,11 @@ public class ProductServiceimpl implements ProductService {
     @Override
     public BigDecimal getProductPriceById(String idProduct) {
         return getProductById(idProduct).getPrice();
+    }
+
+    @Override
+    public Integer limitPurchasing(String idProduct) {
+        Product product=getProductById(idProduct);
+        return product.getQuantity();
     }
 }

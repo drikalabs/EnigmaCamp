@@ -6,6 +6,7 @@ import com.enigma.repositories.PurchaseRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.PrinterException;
 import java.util.List;
 @Service
 public class PurchaseServiseimpl implements PurchaseService {
@@ -29,8 +30,12 @@ public class PurchaseServiseimpl implements PurchaseService {
 
     @Override
     public void purchasing(Purchased purchased) {
-      productService.deduct(purchased.getIdProduct(),purchased.getQuantity());
-      purchased.setPurchasePrice(productService.getProductPriceById(purchased.getIdProduct()));
-      purchaseRepositories.save(purchased);
+        if(productService.limitPurchasing(purchased.getIdProduct())==0) {
+            throw new IllegalArgumentException();
+        }else {
+            productService.deduct(purchased.getIdProduct(), purchased.getQuantity());
+            purchased.setPurchasePrice(productService.getProductPriceById(purchased.getIdProduct()));
+            purchaseRepositories.save(purchased);
+        }
     }
 }
