@@ -11,6 +11,7 @@ import java.util.List;
 public class ProductController {
     @Autowired
     ProductService productService;
+
     @GetMapping("/product")
     public List<Product> products(Product product){
         return productService.getAllProducs(product);
@@ -22,5 +23,9 @@ public class ProductController {
     @PostMapping("/product")
     public void saveProduct(@RequestBody Product product){
         productService.saveProduct(product);
+    }
+    @GetMapping("/products/{keyword}")
+    public List<Product> products(@PathVariable String keyword){
+       return productService.getProducsByName(keyword);
     }
 }

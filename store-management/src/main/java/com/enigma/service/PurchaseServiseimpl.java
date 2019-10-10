@@ -30,12 +30,8 @@ public class PurchaseServiseimpl implements PurchaseService {
 
     @Override
     public void purchasing(Purchased purchased) {
-        if(productService.limitPurchasing(purchased.getIdProduct())==0) {
-            throw new IllegalArgumentException();
-        }else {
-            productService.deduct(purchased.getIdProduct(), purchased.getQuantity());
-            purchased.setPurchasePrice(productService.getProductPriceById(purchased.getIdProduct()));
-            purchaseRepositories.save(purchased);
-        }
+        productService.deduct(purchased.getIdProduct(), purchased.getQuantity());
+        purchased.setPurchasePrice(productService.getProductPriceById(purchased.getIdProduct()));
+        purchaseRepositories.save(purchased);
     }
 }

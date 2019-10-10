@@ -1,6 +1,7 @@
 package com.enigma.entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "mst_store")
@@ -15,8 +16,7 @@ public class Store {
     private String description;
     private String phoneNumber;
 
-    public Store(Integer id, String storeName, String address, String description, String phoneNumber) {
-        this.id = id;
+    public Store(String storeName, String address, String description, String phoneNumber) {
         this.storeName = storeName;
         this.address = address;
         this.description = description;
@@ -64,5 +64,22 @@ public class Store {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Store store = (Store) o;
+        return Objects.equals(id, store.id) &&
+                Objects.equals(storeName, store.storeName) &&
+                Objects.equals(address, store.address) &&
+                Objects.equals(description, store.description) &&
+                Objects.equals(phoneNumber, store.phoneNumber);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, storeName, address, description, phoneNumber);
     }
 }

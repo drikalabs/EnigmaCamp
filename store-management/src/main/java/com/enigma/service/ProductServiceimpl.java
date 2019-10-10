@@ -1,6 +1,7 @@
 package com.enigma.service;
 
 import com.enigma.entities.Product;
+import com.enigma.exception.InsufficientQuantityException;
 import com.enigma.repositories.ProductRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,8 +14,8 @@ public class ProductServiceimpl implements ProductService {
     ProductRepositories productRepositories;
 
     @Override
-    public void saveProduct(Product product) {
-    productRepositories.save(product);
+    public Product saveProduct(Product product) {
+    return productRepositories.save(product);
     }
 
     @Override
@@ -33,10 +34,13 @@ public class ProductServiceimpl implements ProductService {
     @Override
     public void deduct(String idProduct, Integer quantity) {
         Product product=getProductById(idProduct);
-        product.deductQuantity(quantity);
-        product.getQuantity();
-        saveProduct(product);
-
+        if (product.getQuantity()< quantity){
+            throw new InsufficientQuantityException();
+        }else {
+            product.deductQuantity(quantity);
+            product.getQuantity();
+            saveProduct(product);
+        }
     }
 
     @Override
@@ -45,8 +49,9 @@ public class ProductServiceimpl implements ProductService {
     }
 
     @Override
-    public Integer limitPurchasing(String idProduct) {
-        Product product=getProductById(idProduct);
-        return product.getQuantity();
+    public List<Product> getProducsByName(String keyword) {
+       return productRepositories.findAllByNameContains(keyword);
     }
+
+
 }

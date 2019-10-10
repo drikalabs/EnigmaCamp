@@ -4,6 +4,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Objects;
+
 @Entity
 @Table(name = "mst_product")
 public class Product {
@@ -15,6 +17,15 @@ public class Product {
     private String name;
     private Integer quantity;
     private BigDecimal price;
+
+    public Product(String name, Integer quantity, BigDecimal price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public Product() {
+    }
 
     public String getIdProduct() {
         return idProduct;
@@ -49,5 +60,21 @@ public class Product {
     }
     public void deductQuantity(Integer quantity){
         this.quantity = this.quantity-quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(idProduct, product.idProduct) &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(quantity, product.quantity) &&
+                Objects.equals(price, product.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idProduct, name, quantity, price);
     }
 }

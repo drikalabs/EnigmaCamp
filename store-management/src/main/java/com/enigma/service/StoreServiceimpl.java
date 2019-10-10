@@ -13,8 +13,8 @@ public class StoreServiceimpl implements StoreService {
     StoreRepositories storeRepositories;
 
     @Override
-    public void save(Store store) {
-        storeRepositories.save(store);
+    public Store save(Store store) {
+        return storeRepositories.save(store);
     }
 
     @Override
