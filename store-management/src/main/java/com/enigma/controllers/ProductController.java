@@ -26,6 +26,14 @@ public class ProductController {
     }
     @GetMapping("/products/{keyword}")
     public List<Product> products(@PathVariable String keyword){
-       return productService.getProducsByName(keyword);
+        return productService.getProducsByName(keyword);
+    }
+    @GetMapping("store/{idStore}/producs")
+    public List<Product> getProducsByStoreId(@PathVariable Integer idStore){
+        return productService.getProducsbyStoreId(idStore);
+    }
+    @PostMapping("store/{idStore}/product")
+    public Product SaveProductBYStoreId(@PathVariable Integer idStore,@RequestBody Product product){
+        return productService.saveProductByStore(idStore,product);
     }
 }

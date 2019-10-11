@@ -1,6 +1,10 @@
 package com.enigma.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -15,6 +19,9 @@ public class Store {
     private String address;
     private String description;
     private String phoneNumber;
+    @OneToMany(mappedBy = "store")
+    @JsonIgnore
+    private List<Product>products =new ArrayList<>();
 
     public Store(String storeName, String address, String description, String phoneNumber) {
         this.storeName = storeName;
@@ -64,6 +71,14 @@ public class Store {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override

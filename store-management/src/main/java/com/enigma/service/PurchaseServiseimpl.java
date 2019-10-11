@@ -29,9 +29,9 @@ public class PurchaseServiseimpl implements PurchaseService {
     }
 
     @Override
-    public void purchasing(Purchased purchased) {
+    public Purchased purchasing(Purchased purchased) {
         productService.deduct(purchased.getIdProduct(), purchased.getQuantity());
         purchased.setPurchasePrice(productService.getProductPriceById(purchased.getIdProduct()));
-        purchaseRepositories.save(purchased);
+        return purchaseRepositories.save(purchased);
     }
 }
