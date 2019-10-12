@@ -21,8 +21,12 @@ public class ProductController {
         return productService.getProductById(idProduct);
     }
     @PostMapping("/product")
-    public void saveProduct(@RequestBody Product product){
+    public void saveProductwithIdStore(@RequestBody Product product){
         productService.saveProduct(product);
+    }
+    @PostMapping("/productstore")
+    public void saveProduct(@RequestBody Product product){
+        productService.saveProduct(product,product.getdataidStore());
     }
     @GetMapping("/products/{keyword}")
     public List<Product> products(@PathVariable String keyword){

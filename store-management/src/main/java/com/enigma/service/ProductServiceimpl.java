@@ -18,7 +18,13 @@ public class ProductServiceimpl implements ProductService {
 
     @Override
     public Product saveProduct(Product product) {
-    return productRepositories.save(product);
+        return productRepositories.save(product);
+    }
+    @Override
+    public Product saveProduct(Product product,Integer idStore) {
+        Store store =storeService.getStoreById(idStore);
+        product.setStore(store);
+        return productRepositories.save(product);
     }
 
     @Override

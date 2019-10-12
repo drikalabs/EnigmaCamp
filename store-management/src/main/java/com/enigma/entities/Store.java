@@ -19,8 +19,8 @@ public class Store {
     private String address;
     private String description;
     private String phoneNumber;
-    @OneToMany(mappedBy = "store")
-    @JsonIgnore
+    @OneToMany(mappedBy = "store",cascade = CascadeType.PERSIST)
+//    @JsonIgnore
     private List<Product>products =new ArrayList<>();
 
     public Store(String storeName, String address, String description, String phoneNumber) {

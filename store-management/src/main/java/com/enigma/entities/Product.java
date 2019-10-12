@@ -1,5 +1,6 @@
 package com.enigma.entities;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -18,10 +19,14 @@ public class Product {
     private String name;
     private Integer quantity;
     private BigDecimal price;
+
+
     @ManyToOne()
     @JoinColumn(name = "id_store")
     @JsonIgnore
     private Store store;
+    @Transient
+    private Integer dataidStore;
 
     public Product(String name, Integer quantity, BigDecimal price) {
         this.name = name;
@@ -73,6 +78,14 @@ public class Product {
 
     public void setStore(Store store) {
         this.store = store;
+    }
+
+    public Integer getdataidStore() {
+        return dataidStore;
+    }
+
+    public void setStoreid(Integer storeid) {
+        dataidStore = storeid;
     }
 
     @Override

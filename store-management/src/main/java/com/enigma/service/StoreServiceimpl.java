@@ -1,5 +1,6 @@
 package com.enigma.service;
 
+import com.enigma.entities.Product;
 import com.enigma.entities.Store;
 import com.enigma.repositories.StoreRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,9 @@ public class StoreServiceimpl implements StoreService {
 
     @Override
     public Store save(Store store) {
+        for (Product product:store.getProducts()) {
+            product.setStore(store);
+        }
         return storeRepositories.save(store);
     }
 
