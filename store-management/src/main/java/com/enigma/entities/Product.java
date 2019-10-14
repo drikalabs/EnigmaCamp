@@ -21,7 +21,7 @@ public class Product {
     private BigDecimal price;
 
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "id_store")
     @JsonIgnore
     private Store store;

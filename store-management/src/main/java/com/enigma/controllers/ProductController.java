@@ -4,6 +4,9 @@ import com.enigma.entities.Product;
 import com.enigma.service.ProductService;
 import com.enigma.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,8 +16,8 @@ public class ProductController {
     ProductService productService;
 
     @GetMapping("/product")
-    public List<Product> products(Product product){
-        return productService.getAllProducs(product);
+    public List<Product> products(){
+        return productService.getAllProducs();
     }
     @GetMapping("/product/{idProduct}")
     public Product getProduct(@PathVariable String idProduct){
@@ -39,5 +42,10 @@ public class ProductController {
     @PostMapping("store/{idStore}/product")
     public Product SaveProductBYStoreId(@PathVariable Integer idStore,@RequestBody Product product){
         return productService.saveProductByStore(idStore,product);
+    }
+    @GetMapping("/products")
+    public Page<Product>getAllProduct(@RequestParam Integer size,@RequestParam Integer page){
+        Pageable pageable= PageRequest.of(page,size);
+        return productService.GetAll(pageable);
     }
 }

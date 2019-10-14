@@ -28,7 +28,7 @@ public class PurchaseServiseimplTest {
         purchaseRepositories.deleteAll();
     }
 
-    @Test
+    /*@Test
     public void purchasing_Should_Be_CreatedIn_DB() {
         Integer purchase=3;
         Product product= new Product("sabun mandi",10,new BigDecimal(10000));
@@ -37,9 +37,9 @@ public class PurchaseServiseimplTest {
         Purchased expected=purchaseService.purchasing(purchased);
         Purchased result = purchaseRepositories.findById(expected.getIdPurchase()).get();
         assertEquals(expected,result);
-    }
+    }*/
 
-    @Test
+   /* @Test
     public void getAllPurchasesShouldSize2() {
         Integer purchase1=3;
         Integer purchase2=2;
@@ -50,7 +50,7 @@ public class PurchaseServiseimplTest {
         purchaseService.purchasing(purchased1);
         purchaseService.purchasing(purchased2);
         assertEquals(2,purchaseRepositories.findAll().size());
-    }
+    }*/
 
     @Test
     public void getPurchasedById() {

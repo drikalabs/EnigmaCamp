@@ -12,8 +12,8 @@ public class PurchaseController {
     PurchaseService purchaseService;
 
     @GetMapping("/purchase")
-    public List<Purchased> purchasedList(Purchased purchased){
-        return purchaseService.getAllPurchases(purchased);
+    public List<Purchased> purchasedList(){
+        return purchaseService.getAllPurchases();
     }
     @GetMapping("/purchase/{idPurchase}")
     public Purchased getPurchase(@PathVariable String idPurchase){
@@ -23,5 +23,12 @@ public class PurchaseController {
     public void savePurchase(@RequestBody Purchased purchased){
         purchaseService.purchasing(purchased);
     }
-
+    @PostMapping("user/{idUser}/purcahse")
+    public Purchased purchased(@PathVariable String idUser,@RequestBody Purchased purchased){
+        return purchaseService.savePurchaseFromUser(idUser,purchased);
+    }
+    @GetMapping("user/{idUser}/purcahse")
+    public List<Purchased> purchaseds(@PathVariable String idUser){
+        return purchaseService.GetPurschaseFromUser(idUser);
+    }
 }

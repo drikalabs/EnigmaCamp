@@ -5,6 +5,8 @@ import com.enigma.entities.Store;
 import com.enigma.exception.InsufficientQuantityException;
 import com.enigma.repositories.ProductRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -28,6 +30,11 @@ public class ProductServiceimpl implements ProductService {
     }
 
     @Override
+    public Page<Product> GetAll(Pageable pageable) {
+        return productRepositories.findAll(pageable);
+    }
+
+    @Override
     public Product getProductById(String id) {
         if (!productRepositories.findById(id).isPresent()){
             return new Product();
@@ -36,7 +43,7 @@ public class ProductServiceimpl implements ProductService {
     }
 
     @Override
-    public List<Product> getAllProducs(Product product) {
+    public List<Product> getAllProducs() {
         return productRepositories.findAll();
     }
 
