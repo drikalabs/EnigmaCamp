@@ -6,6 +6,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,13 +22,13 @@ public class Product {
     private Integer quantity;
     private BigDecimal price;
 
+    @Transient
+    private Integer dataidStore;
 
     @ManyToOne
     @JoinColumn(name = "id_store")
     @JsonIgnore
     private Store store;
-    @Transient
-    private Integer dataidStore;
 
     public Product(String name, Integer quantity, BigDecimal price) {
         this.name = name;

@@ -20,11 +20,13 @@ public class ProductController {
         return productService.getAllProducs();
     }
     @GetMapping("/product/{idProduct}")
-    public Product getProduct(@PathVariable String idProduct){
+    public Product getProduct(@PathVariable String idProduct)
+    {
         return productService.getProductById(idProduct);
     }
     @PostMapping("/product")
-    public void saveProductwithIdStore(@RequestBody Product product){
+    public void saveProductwithIdStore(@RequestBody Product product)
+    {
         productService.saveProduct(product);
     }
     @PostMapping("/productstore")

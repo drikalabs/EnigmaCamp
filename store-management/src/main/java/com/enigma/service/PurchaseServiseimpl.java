@@ -1,5 +1,6 @@
 package com.enigma.service;
 
+import com.enigma.entities.Product;
 import com.enigma.entities.PurcaseDetail;
 import com.enigma.entities.Purchased;
 import com.enigma.entities.User;
@@ -7,6 +8,7 @@ import com.enigma.repositories.PurchaseRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -65,15 +67,18 @@ public class PurchaseServiseimpl implements PurchaseService {
         User user=userService.GetUserById(purchased.getUserid());
         purchased.setUser(user);
         for (PurcaseDetail items:purchased.getPurcaseDetails()) {
-            purchased.setPurcaseDetails(purchased.getPurcaseDetails());
-            productService.deduct(items.getIdProduct(), items.getQuantity());
-            items.setSubTotalPrice(productService.getProductPriceById(items.getIdProduct()));
-            items.setPurchased(purchased);
-        }
-        for (PurcaseDetail items:purchased.getPurcaseDetails()) {
-            productService.getProductById(items.getIdProduct()).getPrice();
-            purchased.setTotalPrice(items.getSubtotal());
+            sumTotalAndSubtotal(purchased, items);
         }
         return purchaseRepositories.save(purchased);
+    }
+
+    private void sumTotalAndSubtotal(Purchased purchased, PurcaseDetail items) {
+        Product product =productService.getProductById(items.getAcuanproductId());
+        items.setIdProduct(product);
+        productService.deduct(items.getIdProduct().getIdProduct(), items.getQuantity());
+        items.setSubTotalPrice(productService.getProductPriceById(items.getIdProduct().getIdProduct()));
+        items.setPurchased(purchased);
+        BigDecimal total=productService.getProductPriceById(items.getIdProduct().getIdProduct());
+        purchased.setTotalPrice(total);
     }
 }

@@ -17,14 +17,18 @@ public class PurcaseDetail {
     @JoinColumn(name = "id_purchase")
     @JsonIgnore
     private Purchased purchased;
-    private String idProduct;
+
+    @Transient
+    private String acuanproductId;
+
+    @ManyToOne
+    @JoinColumn(name = "id_product")
+    @JsonIgnore
+    private Product idProduct;
+
     private Integer quantity;
     private BigDecimal subtotal;
 
-    public PurcaseDetail(String idProduct, Integer quantity) {
-        this.idProduct = idProduct;
-        this.quantity = quantity;
-    }
 
     public PurcaseDetail() {
     }
@@ -45,14 +49,6 @@ public class PurcaseDetail {
         this.purchased = purchased;
     }
 
-    public String getIdProduct() {
-        return idProduct;
-    }
-
-    public void setIdProduct(String idProduct) {
-        this.idProduct = idProduct;
-    }
-
     public Integer getQuantity() {
         return quantity;
     }
@@ -68,6 +64,23 @@ public class PurcaseDetail {
     public void setSubtotal(BigDecimal subtotal) {
         this.subtotal = subtotal;
     }
+
+    public Product getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(Product idProduct) {
+        this.idProduct = idProduct;
+    }
+
+    public String getAcuanproductId() {
+        return acuanproductId;
+    }
+
+    public void setAcuanproductId(String acuanproductId) {
+        this.acuanproductId = acuanproductId;
+    }
+
     public void setSubTotalPrice(BigDecimal basePrice) {
         this.subtotal = basePrice.multiply(new BigDecimal(this.quantity));
     }

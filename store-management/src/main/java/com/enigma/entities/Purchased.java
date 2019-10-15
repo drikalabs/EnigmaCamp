@@ -1,5 +1,6 @@
 package com.enigma.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -16,12 +17,9 @@ public class Purchased {
     @GenericGenerator(name="system-uuid",strategy = "uuid")
     private String idPurchase;
 
-    /*private String idProduct;
-    private  Integer quantity;*/
     @OneToMany(mappedBy = "purchased",cascade = CascadeType.PERSIST)
     private List<PurcaseDetail>purcaseDetails = new ArrayList<>();
-
-    private BigDecimal totalPrice;
+    private BigDecimal totalPrice=new BigDecimal(0);
 
     @ManyToOne
     @JoinColumn(name = "id_user")
@@ -29,11 +27,6 @@ public class Purchased {
 
     @Transient
     private String userid;
-
-    /*public Purchased(List<ItemPurcase> itemPurcases) {
-        this.itemPurcases = itemPurcases;
-    }*/
-
 
 
     public Purchased() {
@@ -59,7 +52,7 @@ public class Purchased {
     }
 
     public void setTotalPrice(BigDecimal totalPrice) {
-        this.totalPrice = totalPrice;
+        this.totalPrice = this.totalPrice.add(totalPrice);
     }
 
     public List<PurcaseDetail> getPurcaseDetails() {
@@ -80,30 +73,5 @@ public class Purchased {
     public void setUserid(String userid) {
         this.userid = userid;
     }
-    /*public List<ItemPurcase> getItemPurcases() {
-        return itemPurcases;
-    }
-
-    public void setItemPurcases(List<ItemPurcase> itemPurcases) {
-        this.itemPurcases = itemPurcases;
-    }*/
-
-
-    /*public String getIdProduct() {
-        return idProduct;
-    }
-
-    public void setIdProduct(String idProduct) {
-        this.idProduct = idProduct;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
-*/
 
 }
