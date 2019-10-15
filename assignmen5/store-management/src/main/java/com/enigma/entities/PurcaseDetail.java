@@ -1,5 +1,6 @@
 package com.enigma.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ public class PurcaseDetail {
     private String idPd;
     @ManyToOne
     @JoinColumn(name = "id_purchase")
+    @JsonIgnore
     private Purchased purchased;
     private String idProduct;
     private Integer quantity;

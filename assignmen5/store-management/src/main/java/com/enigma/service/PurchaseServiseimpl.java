@@ -68,6 +68,7 @@ public class PurchaseServiseimpl implements PurchaseService {
             purchased.setPurcaseDetails(purchased.getPurcaseDetails());
             productService.deduct(items.getIdProduct(), items.getQuantity());
             items.setSubTotalPrice(productService.getProductPriceById(items.getIdProduct()));
+            items.setPurchased(purchased);
         }
         for (PurcaseDetail items:purchased.getPurcaseDetails()) {
             productService.getProductById(items.getIdProduct()).getPrice();
