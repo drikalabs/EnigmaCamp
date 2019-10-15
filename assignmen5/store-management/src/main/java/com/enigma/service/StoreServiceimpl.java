@@ -3,6 +3,7 @@ package com.enigma.service;
 import com.enigma.entities.Product;
 import com.enigma.entities.Store;
 import com.enigma.repositories.StoreRepositories;
+import com.enigma.specification.StoreSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
@@ -39,5 +40,10 @@ public class StoreServiceimpl implements StoreService {
     public Page<Store> SearchByKeyword(Pageable pageable, Example<Store> keyword) {
        /* return storeRepositories.findAllByAddressContainsOrDescriptionContainsOrPhoneNumberContainsOrStoreNameContains(keyword,keyword,keyword,keyword,pageable);*/
         return storeRepositories.findAll(keyword,pageable);
+    }
+
+    @Override
+    public Page<Store> storeBySpecification(Store store, Pageable pageable) {
+        return storeRepositories.findAll(StoreSpecification.findByCriterias(store),pageable);
     }
 }

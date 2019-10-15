@@ -34,4 +34,9 @@ public class StoreController {
         Pageable pageable= PageRequest.of(page,size);
         return storeService.SearchByKeyword(pageable,storeExample);
     }
+    @GetMapping("/search")
+    public Page<Store> searchBySpecification(@RequestParam Integer size, @RequestParam Integer page, @RequestBody Store SearchForm){
+        Pageable pageable= PageRequest.of(page,size);
+        return storeService.storeBySpecification(SearchForm,pageable);
+    }
 }

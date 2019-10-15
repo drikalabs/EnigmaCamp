@@ -23,7 +23,6 @@ public class PurcaseDetail {
 
     @ManyToOne
     @JoinColumn(name = "id_product")
-    @JsonIgnore
     private Product idProduct;
 
     private Integer quantity;

@@ -15,5 +15,6 @@ public interface StoreService {
     /*public List<Store> searchByName(String name);
     public void delete(Integer id);*/
     public Page<Store>SearchByKeyword(Pageable pageable, Example<Store> keyword);
+    public Page<Store>storeBySpecification(Store store,Pageable pageable);
 
 }
