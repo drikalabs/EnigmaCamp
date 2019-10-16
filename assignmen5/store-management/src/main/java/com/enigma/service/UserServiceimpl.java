@@ -2,7 +2,10 @@ package com.enigma.service;
 
 import com.enigma.entities.User;
 import com.enigma.repositories.UserRepositories;
+import com.enigma.specification.UserSpacification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,5 +31,10 @@ public class UserServiceimpl implements UserService {
     @Override
     public void DeleteUserByID(String idUser) {
         userRepositories.deleteById(idUser);
+    }
+
+    @Override
+    public Page<User> findBuUserSpecification(User user, Pageable pageable) {
+        return userRepositories.findAll(UserSpacification.findByCriterias(user),pageable);
     }
 }

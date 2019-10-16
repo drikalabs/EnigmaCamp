@@ -4,6 +4,7 @@ import com.enigma.entities.Product;
 import com.enigma.entities.Store;
 import com.enigma.exception.InsufficientQuantityException;
 import com.enigma.repositories.ProductRepositories;
+import com.enigma.specification.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -79,5 +80,10 @@ public class ProductServiceimpl implements ProductService {
         Store store =storeService.getStoreById(idStore);
         product.setStore(store);
         return productRepositories.save(product);
+    }
+
+    @Override
+    public Page<Product> findUsePesification(Product product, Pageable pageable) {
+        return productRepositories.findAll(ProductSpecification.findByCriterias(product),pageable);
     }
 }

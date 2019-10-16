@@ -1,6 +1,7 @@
 package com.enigma.controllers;
 
 import com.enigma.entities.Product;
+import com.enigma.entities.User;
 import com.enigma.service.ProductService;
 import com.enigma.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,10 @@ public class ProductController {
     public Page<Product>getAllProduct(@RequestParam Integer size,@RequestParam Integer page){
         Pageable pageable= PageRequest.of(page,size);
         return productService.GetAll(pageable);
+    }
+    @GetMapping("/productSearch")
+    public Page<Product>findBYSpesification(@RequestParam Integer size,@RequestParam Integer page,@RequestBody Product productForm){
+        Pageable pageable =PageRequest.of(page,size);
+        return productService.findUsePesification(productForm,pageable);
     }
 }
