@@ -80,11 +80,15 @@ console.log(name)
 console.log(age)
 console.log(address)
 console.log('=================================')
+
+
 // cara mengisi objek kosong
 var exampleObject={name:"",age:null,address:""}
 console.log(exampleObject)
 console.log()
 console.log('setelah di isi')
+
+
 // cara mengisi
 exampleObject.name="Dedy"
 exampleObject.age=21
@@ -92,5 +96,46 @@ exampleObject.address="lampung"
 console.log(exampleObject)
 console.log('=================================')
 
+
+//penggunaan parsing by reference meng copy alamat memory nya
+let exampleObject2 =exampleObject
+console.log(exampleObject2)
 console.log('=================================')
 
+
+//penggunaan parsing by value menggunakan ...(speate oprator)
+let exampleObject3 ={...exampleObject}
+console.log(exampleObject3)
+console.log('=================================')
+
+// dan bisa menambah value object itu sendiri seperti
+let exampleObject4 ={...exampleObject,gender:"male"} //menambahkan key baru setelah koma dan bisa di set value
+console.log(exampleObject4)
+console.log('=================================')
+let exampleObject5={name:"adrika" ,age:19, address:{city:"trenggalek",street:"pogalan",vilage:"ngulanwetan"},gender:"MALE"}
+console.log(exampleObject5)
+
+// ambil array dalam objek address
+let takeAddres = exampleObject5.address
+console.log(takeAddres)
+
+//take data from object array
+let takeCity =exampleObject5.address.city
+console.log(takeCity)
+console.log('=================================')
+
+//take curent date
+var date =new Date();
+console.log('=================================')
+
+//Object Assign
+let exampleObject6 = Object.assign({},exampleObject5)// sama seperti meng copy vale menggunakan speate oprator
+console.log(exampleObject6)
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
+console.log('=================================')
