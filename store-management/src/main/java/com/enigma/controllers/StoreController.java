@@ -21,6 +21,7 @@ public class StoreController {
     public void saveStore(@RequestBody Store store){
         storeService.save(store);
     }
+    @CrossOrigin
     @GetMapping("/store")
        public List<Store>stores(Store store){
         return  storeService.getAll(store);
