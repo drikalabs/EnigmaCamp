@@ -17,7 +17,7 @@ function fetchData(){
     fetch(url)
         .then(response => response.json())
         .then(json => {
-            let output = '<h2>Lists of Users</h2>';
+            let output = '<h2>Lists of Store</h2>';
             output += '<table border="1">';
             json.forEach(function (items) {
                 output += `
