@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <label>Name :</label>
+    <input type="text" name="name" id="name" onkeyup="show()">
+    <button onclick="show()" type="button">click me</button>
+</form>
+<h1 id="namaLabel"></h1>
+
+<script>
+    function show() {
+      var name=  document.getElementById('name').value
+        console.log(name)
+        document.getElementById('namaLabel').innerHTML=name
+    }
+</script>
+</body>
+</html>
