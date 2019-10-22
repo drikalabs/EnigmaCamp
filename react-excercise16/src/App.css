@@ -30,7 +30,7 @@
   color: white;
   margin: 10px;
   align-items: flex-start;
-  height: 10ch;
+  height: auto;
   width: 40ch;
   background-color: #282c34;
   box-shadow: 5px 10px 15px #888888;
