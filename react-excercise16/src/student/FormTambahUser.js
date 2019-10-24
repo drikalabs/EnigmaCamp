@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-
+import Button from '@material-ui/core/Button';
 class FormTambahUser extends React.Component{
 
     render() {
@@ -12,7 +12,7 @@ class FormTambahUser extends React.Component{
                     <input type="text" name="name" /><br/>
                     <label>Age</label>
                     <input type="text" name="age" /><br/>
-                    <button type="submit"> tambah</button>
+                    <Button variant="contained" color="primary" type="submit">Tambah</Button>
                 </form>
             </div>
 

@@ -16,6 +16,8 @@ class App extends React.Component{
 
   render() {
       let items=[]
+
+
       for(let i=0;i<this.state.peoples.length;i++){
           items.push(<Card data={this.state.peoples[i]}/>)
       }
@@ -41,6 +43,7 @@ class App extends React.Component{
         newData.name = even.target.name.value
         newData.age = even.target.age.value
         console.log('executed')
+        console.log(this.state.peoples)
 
         this.setState({peoples:[...this.state.peoples,newData]})
     }
