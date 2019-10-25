@@ -48,6 +48,9 @@ describe('Product Components',()=>{
         it('should contains Action as child th from table',  ()=> {
             expect(appContainer.find('div').children('table').children('tr').childAt(5).text()).toBe('Action')
         });
+        /*it('should have two products', ()=> {
+            const products = [{idProduct:1,productName:'sabun',price:3000,quantity:3,toko:'sabar subur'}]
+        });*/
 
 
     })

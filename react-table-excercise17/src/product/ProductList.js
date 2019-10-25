@@ -3,8 +3,16 @@ import '../App.css';
 import {Link} from "react-router-dom";
 
 class ProductList extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            products: []
+        }
+    }
+
+
     render() {
-        let data = this.props.prod
         return (
             <div className="content">
                 <h1>Ini List</h1>
@@ -18,7 +26,7 @@ class ProductList extends React.Component {
                         <th>Store</th>
                         <th>Action</th>
                     </tr>
-                    {data.map(isi=>{
+                    {this.state.products.map(isi=>{
                         return(
                             <tr>
                                 <td>{isi.idProduct}</td>
@@ -39,7 +47,11 @@ class ProductList extends React.Component {
             </div>
         );
     }
-
+componentDidMount() {
+        if (!(this.props.prod===undefined)){
+            this.setState({products:this.props.prod})
+        }
+}
 
 }
 
