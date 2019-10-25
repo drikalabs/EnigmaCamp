@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ArtistContainer from "./artist/ArtistContainer";
 
 class App extends React.Component{
 
@@ -8,7 +9,8 @@ class App extends React.Component{
     super(props);
     this.state ={
       tulisan:"",
-        out:""
+        out:"",
+        artist:[]
     }
   }
 
@@ -33,6 +35,7 @@ class App extends React.Component{
           <input type="text" value={this.state.tulisan} onChange={this.handler}/>
           <button onClick={this.setter}>click</button>
             <label >{this.state.out}</label>
+            <ArtistContainer/>
         </div>
     );
   }
