@@ -3,15 +3,12 @@ import '../App.css';
 import {Link} from "react-router-dom";
 
 class ProductList extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
             products: []
         }
     }
-
-
     render() {
         return (
             <div className="content">
@@ -52,8 +49,6 @@ componentDidMount() {
             this.setState({products:this.props.prod})
         }
 }
-
 }
-
 
 export default ProductList;
