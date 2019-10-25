@@ -1,42 +1,38 @@
 import React from 'react';
 import '../App.css';
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import ProductForm from "./ProductForm";
-import Detail from "./Detail";
+import {Link} from "react-router-dom";
 
 class ProductList extends React.Component {
     render() {
-        let data = []
-
-        for (let i = 0; i < this.props.prod.length; i++) {
-            data.push(
-                <tr>
-                    <td>{[i+1]}</td>
-                    <td>{this.props.prod[i].productName}</td>
-                    <td>Rp.{this.props.prod[i].price}</td>
-                    <td>{this.props.prod[i].quantity}</td>
-                    <td>{this.props.prod[i].toko}</td>
-                    <td><Link className="btn-detail" to={"/detail/"+this.props.prod[i].idProduct}>Detail</Link>
-                    </td>
-
-
-                </tr>
-            )
-        }
-        console.log(this.props.prod)
+        let data = this.props.prod
         return (
             <div className="content">
                 <h1>Ini List</h1>
+                <Link className="btn-detail" to="/product-form" >Tambah Data</Link>
                 <table>
                     <tr>
-                        <th>No.</th>
+                        <th>Product Id</th>
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Store</th>
                         <th>Action</th>
                     </tr>
-                    {data}
+                    {data.map(isi=>{
+                        return(
+                            <tr>
+                                <td>{isi.idProduct}</td>
+                                <td>{isi.productName}</td>
+                                <td>Rp.{isi.price}</td>
+                                <td>{isi.quantity}</td>
+                                <td>{isi.toko}</td>
+                                <td><Link className="btn-detail" to={"/detail/"+isi.idProduct}>Detail</Link>
+                                </td>
+                            </tr>
+                        )
+
+                    })}
+
 
                 </table>
 

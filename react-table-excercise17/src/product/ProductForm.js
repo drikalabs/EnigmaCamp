@@ -6,7 +6,7 @@ class ProductForm extends React.Component {
         return (
             <div className="content">
                 <h1>Ini Form</h1>
-                <div className="form">
+                <section className="form">
                     <form onSubmit={this.props.action}>
                         <input type="text" name="idProduct" placeholder="Product ID"/>
 
@@ -19,7 +19,7 @@ class ProductForm extends React.Component {
                         <input type="text" name="toko" placeholder="Store Name"/><br/>
                         <button type="submit" className="btn">Submit</button>
                     </form>
-                </div>
+                </section>
             </div>
         );
     }

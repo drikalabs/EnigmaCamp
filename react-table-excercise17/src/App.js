@@ -36,7 +36,6 @@ class App extends React.Component {
                             <h1>Aplication Management</h1>
                             <li><Link to="#">Home</Link></li>
                             <li><Link to="/product-list">Produc List</Link></li>
-                            <li><Link to="/product-form">Product Form</Link></li>
                         </ul>
                     </nav>
 
