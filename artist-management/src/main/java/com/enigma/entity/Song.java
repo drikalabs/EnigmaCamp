@@ -83,7 +83,7 @@ public class Song {
         return Objects.equals(idSong, song.idSong) &&
                 Objects.equals(titleSong, song.titleSong) &&
                 Objects.equals(releaseDate, song.releaseDate) &&
-                Objects.equals(artist, song.artist) &&
+                Objects.equals(song.artist, song.artist) &&
                 Objects.equals(idArtistContainer, song.idArtistContainer);
     }
 

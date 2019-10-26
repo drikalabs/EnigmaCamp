@@ -21,10 +21,10 @@ public class Artist {
     private String bornPlace;
     private String gender;
 
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date debuteDate;
 
-    @OneToMany(mappedBy = "artist")
+    @OneToMany(mappedBy = "artist",cascade = CascadeType.PERSIST)
     private List<Song>songList =new ArrayList<>();
 
     public Artist() {
@@ -94,12 +94,11 @@ public class Artist {
                 Objects.equals(artistName, artist.artistName) &&
                 Objects.equals(bornPlace, artist.bornPlace) &&
                 Objects.equals(gender, artist.gender) &&
-                Objects.equals(debuteDate, artist.debuteDate) &&
-                Objects.equals(songList, artist.songList);
+                Objects.equals(debuteDate, artist.debuteDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idArtist, artistName, bornPlace, gender, debuteDate, songList);
+        return Objects.hash(idArtist, artistName, bornPlace, gender, debuteDate);
     }
 }
