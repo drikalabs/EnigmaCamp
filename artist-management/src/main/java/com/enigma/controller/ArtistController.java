@@ -20,4 +20,9 @@ public class ArtistController {
     public Artist SaveArtist(@RequestBody Artist artist){
         return artistService.saveArtist(artist);
     }
+    @CrossOrigin
+    @GetMapping("/artist")
+    public List<Artist> getAllArtist(){
+        return artistService.getAllArtist();
+    }
 }
