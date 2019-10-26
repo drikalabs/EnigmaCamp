@@ -1,5 +1,6 @@
 package com.enigma.service;
 
+import com.enigma.entity.Artist;
 import com.enigma.entity.Song;
 import com.enigma.repositories.SongRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,8 @@ import java.util.List;
 public class ImplementsSongService implements SongService {
     @Autowired
     SongRepositories songRepositories;
+    @Autowired
+    ArtistService artistService;
 
     @Override
     public Song getSongsById(String idSong) {
@@ -19,6 +22,8 @@ public class ImplementsSongService implements SongService {
 
     @Override
     public Song saveSong(Song song) {
+        Artist artist =artistService.getArtistById(song.getIdArtistContainer());
+        song.setArtist(artist);
         return songRepositories.save(song);
     }
 

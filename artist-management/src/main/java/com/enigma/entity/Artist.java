@@ -2,12 +2,12 @@ package com.enigma.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -21,8 +21,11 @@ public class Artist {
     private String bornPlace;
     private String gender;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date debuteDate;
+
+    @OneToMany(mappedBy = "artist")
+    private List<Song>songList =new ArrayList<>();
 
     public Artist() {
     }
@@ -74,6 +77,14 @@ public class Artist {
         this.debuteDate = debuteDate;
     }
 
+    public List<Song> getSongList() {
+        return songList;
+    }
+
+    public void setSongList(List<Song> songList) {
+        this.songList = songList;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,11 +94,12 @@ public class Artist {
                 Objects.equals(artistName, artist.artistName) &&
                 Objects.equals(bornPlace, artist.bornPlace) &&
                 Objects.equals(gender, artist.gender) &&
-                Objects.equals(debuteDate, artist.debuteDate);
+                Objects.equals(debuteDate, artist.debuteDate) &&
+                Objects.equals(songList, artist.songList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idArtist, artistName, bornPlace, gender, debuteDate);
+        return Objects.hash(idArtist, artistName, bornPlace, gender, debuteDate, songList);
     }
 }
