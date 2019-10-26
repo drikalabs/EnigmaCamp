@@ -2,6 +2,7 @@ package com.enigma.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,7 @@ public class Song {
     private String idSong;
     private String titleSong;
     private String artistName;
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private Date releaseDate;
 
     public Song(String titleSong, String artistName, Date releaseDate) {
