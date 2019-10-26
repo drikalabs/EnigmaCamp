@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.Objects;
+
 @Entity
 @Table(name = "mst_artist")
 public class Artist {
@@ -25,10 +27,11 @@ public class Artist {
     public Artist() {
     }
 
-    public Artist(String artistName, String bornPlace, String gender) {
+    public Artist(String artistName, String bornPlace, String gender,Date debuteDate) {
         this.artistName = artistName;
         this.bornPlace = bornPlace;
         this.gender = gender;
+        this.debuteDate=debuteDate;
     }
 
     public String getIdArtist() {
@@ -69,5 +72,22 @@ public class Artist {
 
     public void setDebuteDate(Date debuteDate) {
         this.debuteDate = debuteDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Artist artist = (Artist) o;
+        return Objects.equals(idArtist, artist.idArtist) &&
+                Objects.equals(artistName, artist.artistName) &&
+                Objects.equals(bornPlace, artist.bornPlace) &&
+                Objects.equals(gender, artist.gender) &&
+                Objects.equals(debuteDate, artist.debuteDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idArtist, artistName, bornPlace, gender, debuteDate);
     }
 }
