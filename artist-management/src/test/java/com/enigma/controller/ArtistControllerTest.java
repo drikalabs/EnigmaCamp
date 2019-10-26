@@ -3,6 +3,7 @@ package com.enigma.controller;
 import com.enigma.entity.Artist;
 import com.enigma.repositories.ArtistRepositories;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,5 +41,16 @@ public class ArtistControllerTest {
         mockMvc.perform(post("/artist")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(artist))).andExpect(status().isOk());
+    }
+    @Test
+    public void should_Exist_In_Database_When_Save_Artist()throws Exception{
+        ObjectMapper objectMapper =new ObjectMapper();
+        Artist artist =new Artist("kiki","Medan","M",new Date());
+        artist = artistRepositories.save(artist);
+        String response = mockMvc.perform(post("/artist")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(artist))).andReturn().getResponse().getContentAsString();
+        Artist expectArtist =new ObjectMapper().readValue(response,Artist.class);
+        Assert.assertEquals(expectArtist,artistRepositories.findById(artist.getIdArtist()).get());
     }
 }
