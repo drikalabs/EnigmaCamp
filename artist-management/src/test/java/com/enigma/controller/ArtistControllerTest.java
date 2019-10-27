@@ -2,6 +2,7 @@ package com.enigma.controller;
 
 import com.enigma.entity.Artist;
 import com.enigma.repositories.ArtistRepositories;
+import com.enigma.repositories.SongRepositories;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,12 +27,15 @@ import static org.junit.Assert.*;
 public class ArtistControllerTest {
     @Autowired
     ArtistRepositories artistRepositories;
+    @Autowired
+    SongRepositories songRepositories;
 
     @Autowired
     MockMvc mockMvc;
 
     @Before
     public void setUp(){
+        songRepositories.deleteAll();
         artistRepositories.deleteAll();
     }
     @Test

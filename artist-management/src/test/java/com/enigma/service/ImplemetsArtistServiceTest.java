@@ -2,6 +2,7 @@ package com.enigma.service;
 
 import com.enigma.entity.Artist;
 import com.enigma.repositories.ArtistRepositories;
+import com.enigma.repositories.SongRepositories;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,9 +22,12 @@ public class ImplemetsArtistServiceTest {
     ArtistService artistService;
     @Autowired
     ArtistRepositories artistRepositories;
+    @Autowired
+    SongRepositories songRepositories;
 
     @Before
     public void setUp(){
+        songRepositories.deleteAll();
         artistRepositories.deleteAll();
     }
     @Test

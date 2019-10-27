@@ -37,8 +37,8 @@ public class SongsControllerTest {
 
     @Before
     public void setUp()  {
-        artistRepositories.deleteAll();
         songRepositories.deleteAll();
+        artistRepositories.deleteAll();
     }
     @Test
     public void should_return_status_ok_when_submit() throws Exception {
@@ -50,5 +50,6 @@ public class SongsControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(song))).andExpect(status().isOk());
     }
+
 
 }

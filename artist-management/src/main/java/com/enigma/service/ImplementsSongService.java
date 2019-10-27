@@ -4,6 +4,8 @@ import com.enigma.entity.Artist;
 import com.enigma.entity.Song;
 import com.enigma.repositories.SongRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,6 +30,11 @@ public class ImplementsSongService implements SongService {
     }
 
     @Override
+    public void deleteByArtistId(String idArtist) {
+        songRepositories.deleteByArtistid(""+idArtist+"");
+    }
+
+    @Override
     public List<Song> getAllSongs() {
         return songRepositories.findAll();
     }
@@ -35,5 +42,15 @@ public class ImplementsSongService implements SongService {
     @Override
     public void deleteSongsById(String idSong) {
         songRepositories.deleteById(idSong);
+    }
+
+    @Override
+    public Page<Song> GetAllSongsPagination(Pageable pageable) {
+        return songRepositories.findAll(pageable);
+    }
+
+    @Override
+    public Page<Song> FindByTitle(String keyword, Pageable pageable) {
+        return songRepositories.findAllByTitleSongContains(keyword,pageable);
     }
 }

@@ -49,8 +49,8 @@ public class ImplementsSongServiceTest {
         artist=artistRepositories.save(artist);
         Song song1 = new Song("Lovely Boys",new Date(),artist.getIdArtist());
         Song song2 = new Song("Lovely Girls",new Date(),artist.getIdArtist());
-        songRepositories.save(song1);
-        songRepositories.save(song2);
+        songService.saveSong(song1);
+        songService.saveSong(song2);
         assertEquals(2,songService.getAllSongs().size());
     }
     @Test
@@ -58,7 +58,7 @@ public class ImplementsSongServiceTest {
         Artist artist = new Artist("kiki","Jakarta","M",new Date());
         artist=artistRepositories.save(artist);
         Song song = new Song("Lovely Boys",new Date(),artist.getIdArtist());
-        song= songRepositories.save(song);
+        song= songService.saveSong(song);
         assertEquals(songService.getSongsById(song.getIdSong()),songRepositories.findById(song.getIdSong()).get());
     }
     @Test
@@ -66,8 +66,21 @@ public class ImplementsSongServiceTest {
         Artist artist = new Artist("kiki","Jakarta","M",new Date());
         artist=artistRepositories.save(artist);
         Song song = new Song("Lovely Boys",new Date(),artist.getIdArtist());
-        songRepositories.save(song);
+        songService.saveSong(song);
         songService.deleteSongsById(song.getIdSong());
         assertEquals(0,songRepositories.findAll().size());
     }
+//    @Test
+//    public void shoud_delete_songs_by_artist_id(){
+//        Artist artist = new Artist("kiki","Jakarta","M",new Date());
+//        artist=artistRepositories.save(artist);
+//        Song song1 = new Song("Lovely Boys",new Date(),artist.getIdArtist());
+//        Song song2 = new Song("Lovely lovely",new Date(),artist.getIdArtist());
+//        Song song3 = new Song("Lovely girls",new Date(),artist.getIdArtist());
+//        songService.saveSong(song1);
+//        songService.saveSong(song2);
+//        songService.saveSong(song3);
+//        songService.deleteByArtistId(artist.getIdArtist());
+//        assertEquals(0,songService.getAllSongs().size());
+//    }
 }

@@ -15,7 +15,7 @@ public class Song {
     @GenericGenerator(name="system-uuid",strategy = "uuid")
     private String idSong;
     private String titleSong;
-    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date releaseDate;
 
     @ManyToOne
