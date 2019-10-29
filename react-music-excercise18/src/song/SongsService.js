@@ -8,3 +8,11 @@ export async function SubmitSong(songForm) {
         })
     return data;
 }
+export async function getSongsData() {
+    const data = await fetch('http://localhost:9009/song',{method:'GET'})
+        .then((response)=>{
+            console.log(response)
+            return response.json()
+        })
+    return data;
+}

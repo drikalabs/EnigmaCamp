@@ -63,7 +63,6 @@ class SongForm extends React.Component {
         this.setState({songData:{...songform}})
     }
     handleButton=(event)=>{
-        event.preventDefault()
         SubmitSong(this.state.songData)
     }
 
