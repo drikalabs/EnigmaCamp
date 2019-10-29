@@ -5,7 +5,7 @@
 
 .App-logo {
   padding: 10px;
-  height: 8vmin;
+  height: 80px;
   font-family: arial;
 }
 
@@ -141,6 +141,7 @@ input[type=text], select, textarea {
 .atist-logo{
   border-radius: 50%;
   height: 20vmin;
+  width: 20vmin;
 }
 .pagination {
   margin-top: 25px;

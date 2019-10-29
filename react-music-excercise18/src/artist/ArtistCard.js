@@ -9,7 +9,7 @@ class ArtistCard extends React.Component{
 
         return (
             <div className="card">
-                <img src={logo} alt="logo" className="atist-logo"/>
+                <img src={`http://localhost/img/${this.props.data.idArtist}.jpg`} alt="logo" className="atist-logo"/>
                 <p>{this.props.data.artistName}</p>
                 <p>{this.props.data.bornPlace}</p>
                 <p>{this.props.data.gender}</p>
