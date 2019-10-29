@@ -1,27 +1,23 @@
 import React from 'react';
 import '../App.css';
+import logo from "../logo2.jpg";
+import {Link} from "react-router-dom";
 
 class ArtistCard extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state ={
-            data:[]
-        }
-    }
 
     render() {
 
         return (
-            <div className="App">
-                <h1>{this.state.data.artistName}</h1>
+            <div className="card">
+                <img src={logo} alt="logo" className="atist-logo"/>
+                <p>{this.props.data.artistName}</p>
+                <p>{this.props.data.bornPlace}</p>
+                <p>{this.props.data.gender}</p>
+                <Link className="btn-detail">Detail</Link>
             </div>
         );
     }
-    componentDidMount() {
-        if (!(this.props.satuan === undefined)){
-            this.setState({data:this.props.satuan})
-        }
-    }
+
 
 }
 

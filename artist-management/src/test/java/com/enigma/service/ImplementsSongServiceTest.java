@@ -9,6 +9,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -39,9 +42,8 @@ public class ImplementsSongServiceTest {
         artist=artistRepositories.save(artist);
         Song song = new Song("Lovely Boys",new Date(),artist.getIdArtist());
         song= songService.saveSong(song);
-        Song expected = songService.getSongsById(song.getIdSong());
         Song actual =songRepositories.findById(song.getIdSong()).get();
-        assertEquals(expected,actual);
+        assertEquals(song,actual);
     }
     @Test
     public void should_get_all_data_when_getAllData(){
@@ -49,9 +51,12 @@ public class ImplementsSongServiceTest {
         artist=artistRepositories.save(artist);
         Song song1 = new Song("Lovely Boys",new Date(),artist.getIdArtist());
         Song song2 = new Song("Lovely Girls",new Date(),artist.getIdArtist());
-        songService.saveSong(song1);
-        songService.saveSong(song2);
-        assertEquals(2,songService.getAllSongs().size());
+        song1=songService.saveSong(song1);
+        song2=songService.saveSong(song2);
+        List<Song>expected=new ArrayList<>();
+        expected.add(song1);
+        expected.add(song2);
+        assertEquals(expected,songService.getAllSongs());
     }
     @Test
     public void should_data_return_same_as_id_when_getById(){
@@ -59,7 +64,7 @@ public class ImplementsSongServiceTest {
         artist=artistRepositories.save(artist);
         Song song = new Song("Lovely Boys",new Date(),artist.getIdArtist());
         song= songService.saveSong(song);
-        assertEquals(songService.getSongsById(song.getIdSong()),songRepositories.findById(song.getIdSong()).get());
+        assertEquals(song,songRepositories.findById(song.getIdSong()).get());
     }
     @Test
     public void should_0_when_take_data_afterdeleteSongById(){
@@ -70,17 +75,18 @@ public class ImplementsSongServiceTest {
         songService.deleteSongsById(song.getIdSong());
         assertEquals(0,songRepositories.findAll().size());
     }
-//    @Test
-//    public void shoud_delete_songs_by_artist_id(){
-//        Artist artist = new Artist("kiki","Jakarta","M",new Date());
-//        artist=artistRepositories.save(artist);
-//        Song song1 = new Song("Lovely Boys",new Date(),artist.getIdArtist());
-//        Song song2 = new Song("Lovely lovely",new Date(),artist.getIdArtist());
-//        Song song3 = new Song("Lovely girls",new Date(),artist.getIdArtist());
-//        songService.saveSong(song1);
-//        songService.saveSong(song2);
-//        songService.saveSong(song3);
-//        songService.deleteByArtistId(artist.getIdArtist());
-//        assertEquals(0,songService.getAllSongs().size());
-//    }
+    @Test
+    public void shoul_return_data_with_pageable(){
+        Artist artist = new Artist("kiki","Jakarta","M",new Date());
+        artist=artistRepositories.save(artist);
+        Song song1 = new Song("Lovely Boys",new Date(),artist.getIdArtist());
+        Song song2 = new Song("Lovely Girls",new Date(),artist.getIdArtist());
+        song1=songService.saveSong(song1);
+        song2=songService.saveSong(song2);
+        List<Song>expected=new ArrayList<>();
+        expected.add(song1);
+        expected.add(song2);
+        Pageable pageable = PageRequest.of(0,2);
+        assertEquals(expected.size(),songService.GetAllSongsPagination(pageable).getTotalElements());
+    }
 }

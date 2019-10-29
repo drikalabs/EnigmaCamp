@@ -24,7 +24,7 @@ public class Artist {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date debuteDate;
 
-    @OneToMany(mappedBy = "artist",cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "artist",cascade = CascadeType.ALL)
     private List<Song>songList =new ArrayList<>();
 
     public Artist() {

@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
@@ -59,5 +61,17 @@ public class ImplemetsArtistServiceTest {
         artist = artistService.saveArtist(artist);
         artistService.deleteArtistById(artist.getIdArtist());
         assertEquals(0,artistRepositories.findAll().size());
+    }
+    @Test
+    public  void get_artist_by_pagination(){
+        Artist artist1 =new Artist("kiki","Medan","M",new Date());
+        Artist artist2 =new Artist("yoga","jakarta","F",new Date());
+        artist1 = artistRepositories.save(artist1);
+        artist2 = artistRepositories.save(artist2);
+        List<Artist>artists=new ArrayList<>();
+        artists.add(artist1);
+        artists.add(artist2);
+        Pageable pageable = PageRequest.of(0,2);
+        assertEquals(artists.size(),artistService.getArtistWIthPagination(pageable).getTotalElements());
     }
 }
