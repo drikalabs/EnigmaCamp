@@ -20,3 +20,17 @@ export  async function fetchtPagination(pageNumber) {
             return resp.json()})
     return data;
 }
+
+export  async  function submitWithImage(data,file) {
+    const formData = new FormData();
+    formData.append('data',data);
+    formData.append('file',file);
+    console.log(formData);
+    return await fetch(`http://localhost:9009/saveartist`,{method:'POST',body:formData})
+        .then((response)=>{
+            return response.json()
+            console.log(response);
+        })
+        .catch(err =>err);
+
+}
