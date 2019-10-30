@@ -56,7 +56,7 @@ function counter(state=[{name:"",age:null}], aksi) {
         case'ADD_NEW_ELEMENT' :return state.concat([{name:"",age:null}]);
         case'INCREMENT' :return state.map((element,index)=>{
             if (index == aksi.index){
-                return state =  { name: aksi.name , age:aksi.age}
+                return state =  {name: element.name +aksi.name, age:aksi.age}
             }else {
                 return element
             }
@@ -80,6 +80,6 @@ store.dispatch({type:'ADD_NEW_ELEMENT'});
 
 store.dispatch({type:'INCREMENT', index:0, name:"gfdhgj"});
 store.dispatch({type:'INCREMENT', index:1, name:"rdfchg"});
-store.dispatch({type:'INCREMENT', index:2, name:"rsyfghj"});
+store.dispatch({type:'INCREMENT', index:2, name:"rsyfghj",age:null});
 store.dispatch({type:'DECREMENT', index:3});
 
