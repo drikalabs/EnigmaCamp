@@ -1,31 +1,40 @@
 import React from 'react';
-import {connect} from "react-redux";
+import { connect } from 'react-redux';
+import Counter from './Counter';
 import '../App.css';
+import {decrement, increment} from "./Const_Action";
 
-class CounterContainer extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    render() {
-        const increment={type:'INCREMENT'};
-        const dicrement={type:'DECREMENT'};
-        return (
-            <div className="card">
-
-                <h1>{this.props.number}</h1>
-                <button onClick={()=>{this.props.dispatch(dicrement)}}>-</button>
-                <button onClick={()=>{this.props.dispatch(increment)}}>+</button>
-            </div>
-
-        );
-    }
-}
-const mapStateToProps=(state)=>{
-    return{number:state.number}
-}
-const mapDispatcToProps=(dispatch) =>{
-    return{
-
-    }
-}
-export default connect(mapStateToProps) (CounterContainer);
+const CounterContainer = ({
+                              counters,
+                              onIncrement,
+                              onDecrement
+                          }) => (
+    <ul>
+        {counters.map(counter =>
+            <Counter key={counter.id}
+                     value={counter.count}
+                     onIncrement={() => onIncrement(counter.id)}
+                     onDecrement={() => onDecrement(counter.id)}
+            />
+        )}
+    </ul>
+);
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {counters: state}
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onIncrement: (id) => dispatch(increment(id)),
+        onDecrement: (id) => dispatch(decrement(id))
+    };
+};
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(CounterContainer);
+// const mapDispatcToProps=(dispatch) =>{
+//     return{
+//     }
+//}
+//export default connect(mapStateToProps)(CounterContainer);
