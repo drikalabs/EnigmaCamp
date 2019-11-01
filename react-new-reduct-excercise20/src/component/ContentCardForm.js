@@ -6,7 +6,7 @@ class ContentCardForm extends React.Component {
     render() {
         console.log(this.props)
         return (
-            <div className="">
+            <div className="card">
                 <form action="">
                     <label >Artist</label>
                     <input type="text" onChange={(event)=>
