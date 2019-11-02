@@ -7,10 +7,13 @@ import {Provider} from "react-redux";
 import ContentContainer from "./component/ContentContainer";
 import {createStore} from "redux";
 import content_changer from "./component/reducer/ContentReducer";
+import ArtistContainer from "./artist/ArtistContainer";
+import fetchingData from "./artist/reducer/ArtistReducer";
 
 ReactDOM.render(
-    <Provider store={createStore(content_changer)}>
-        <ContentContainer/>
+    <Provider store={createStore(fetchingData)}>
+        {/*<ContentContainer/>*/}
+        <ArtistContainer/>
     </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -3,12 +3,14 @@ import {connect} from "react-redux";
 import ContentCardForm from "./ContentCardForm";
 import {new_content} from "./ConstAction";
 import ContentTable from "./ContentTable";
+import ArtistContainer from "../artist/ArtistContainer";
 
 class ContentContainer extends React.Component {
     render() {
         console.log(this.props)
         return (
             <div>
+                <ArtistContainer/>
                 <button onClick={() => (this.props.dispatch(new_content))}>Add Content</button>
                 <br/>
                 {this.props.content.map((element, index) => {

@@ -1,5 +1,6 @@
 const initialState ={
-    content:[]
+    content:[],
+    dataFetching:[]
 }
 export default function content_changer(state=initialState,action) {
     console.log(state,action);
