@@ -85,7 +85,8 @@ store.dispatch({type:'INCREMENT',index:0});*/
 
 const {createStore} =require ('redux');
 const initialData={
-    number:0,person:{name:"",age:0}
+    number:0,
+    person:{name:"",age:0}
 }
 function counter(state=initialData, aksi) {
     switch (aksi.type) {

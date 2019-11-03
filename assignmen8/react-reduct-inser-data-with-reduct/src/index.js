@@ -6,9 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from "react-redux";
 import ArtistContainer from "./artist/ArtistContainer";
 import {createStore} from "redux";
-import artist_reducer from "./artist/reducer/ArtistReducer";
+import artistReducer from "./artist/reducer/ArtistReducer";
 
-ReactDOM.render(<Provider store={createStore(artist_reducer)}>
+ReactDOM.render(<Provider store={createStore(artistReducer)}>
     <ArtistContainer/>
 </Provider>, document.getElementById('root'));
 
