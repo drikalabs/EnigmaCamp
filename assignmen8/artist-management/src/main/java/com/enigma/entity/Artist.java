@@ -21,7 +21,8 @@ public class Artist {
     private String bornPlace;
     private String gender;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date debuteDate;
 
     @OneToMany(mappedBy = "artist",cascade = CascadeType.ALL)

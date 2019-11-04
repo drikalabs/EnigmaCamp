@@ -10,7 +10,7 @@ class SongsForm extends React.Component{
                         <li>
                             <input type="text" name="field1" className="field-style field-split align-left"
                                    placeholder="Title" onChange={(event)=>{this.props.dispatch({...song_title_handler,index:this.props.index,payload:event.target.value})}}/>
-                            <input type="text" name="field2" className="field-style field-split align-right"
+                            <input type="date" name="field2" className="field-style field-split align-right"
                                    placeholder="release date" onChange={(event)=>{this.props.dispatch({...song_releaseDate_handler,index:this.props.index,payload:event.target.value})}} />
 
                         </li>

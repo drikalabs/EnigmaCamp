@@ -1,8 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
 import SongsForm from "./SongsForm";
-import {add_form} from "./ConstAction";
-
 class ArtistForm extends React.Component {
     render() {
         console.log(this.props, "ini prosp form")
@@ -18,7 +16,7 @@ class ArtistForm extends React.Component {
 
                         </li>
                         <li>
-                            <input type="text" name="field3" className="field-style field-split align-left"
+                            <input type="date" name="field3" className="field-style field-split align-left"
                                    placeholder="Debute Date" onChange={this.props.debuteDate}/>
                             <select name="field4" className="field-style field-split align-right"
                                     onChange={this.props.gender}>

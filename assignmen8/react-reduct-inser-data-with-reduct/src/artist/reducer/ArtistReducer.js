@@ -1,7 +1,6 @@
 const initialState = {
     fetchResult: [],
     dataArtist: {artistName: "", bornPlace: "", gender: "", debuteDate: "", songList: []}
-
 }
 export default function artistReducer(state = initialState, action) {
     console.log(state, action)

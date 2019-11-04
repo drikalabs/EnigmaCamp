@@ -11,59 +11,62 @@ import {
 } from "./ConstAction";
 import NavBar from "./NavBar";
 import ArtistForm from "./ArtistForm";
-class ArtistContainer extends React.Component{
+import ArtistCard from "./ArtistCard";
+
+class ArtistContainer extends React.Component {
     render() {
         console.log(this.props.dataArtist)
         return (
-                <div>
-                    <NavBar/>
-                    <ArtistForm
-                        nameHandle={this.handleInputName}
-                        bornPlace={this.handleInputbornPlace}
-                        debuteDate={this.handleInputDebuteDate}
-                        gender={this.handleInputgender}
-                        handlebutton={this.handleButton}
-                        handleAddSong={this.handdleaddSongs}
-                    />
-                    {this.props.fetchResult.map((element,index)=>{
-                        return <p>{element.artistName}</p>
-                    })}
-                </div>
+            <div>
+                <NavBar/>
+                <ArtistForm
+                    nameHandle={this.handleInputName}
+                    bornPlace={this.handleInputbornPlace}
+                    debuteDate={this.handleInputDebuteDate}
+                    gender={this.handleInputgender}
+                    handlebutton={this.handleButton}
+                    handleAddSong={this.handdleaddSongs}
+                />
+                {this.props.fetchResult.map((element, index) => {
+                    return <ArtistCard element={element}/>
+                })}
+            </div>
         );
     }
+
     componentDidMount() {
         this.fetchResult()
     }
-    fetchResult = async ()=>{
-        const result =await fetchingDatas();
+
+    fetchResult = async () => {
+        const result = await fetchingDatas();
         console.log(result);
-        this.props.dispatch({...fetching_success,payload:result})
+        this.props.dispatch({...fetching_success, payload: result})
     }
-    handleInputName=(event)=>{
-        this.props.dispatch({...artistName_handler,payload: event.target.value})
+    handleInputName = (event) => {
+        this.props.dispatch({...artistName_handler, payload: event.target.value})
     }
-    handleInputbornPlace=(event)=>{
-        this.props.dispatch({...bornPlace_handler,payload: event.target.value})
+    handleInputbornPlace = (event) => {
+        this.props.dispatch({...bornPlace_handler, payload: event.target.value})
     }
-    handleInputDebuteDate=(event)=>{
-        this.props.dispatch({...debuteDate_handler,payload: event.target.value})
+    handleInputDebuteDate = (event) => {
+        this.props.dispatch({...debuteDate_handler, payload: event.target.value})
     }
-    handleInputgender=(event)=>{
-        this.props.dispatch({...gender_handler,payload: event.target.value})
+    handleInputgender = (event) => {
+        this.props.dispatch({...gender_handler, payload: event.target.value})
     }
-    handleButton=(event)=>{
-        event.preventDefault()
-        let data ={...this.props.dataArtist};
+    handleButton = () => {
+        let data = {...this.props.dataArtist};
         submitData(data)
     }
-    handdleaddSongs=(event)=>{
+    handdleaddSongs = (event) => {
         event.preventDefault()
         this.props.dispatch({...add_form})
     }
 
 }
 
-const toMapstate=(state)=>{
-    return{...state}
+const toMapstate = (state) => {
+    return {...state}
 }
-export default connect(toMapstate) (ArtistContainer);
+export default connect(toMapstate)(ArtistContainer);

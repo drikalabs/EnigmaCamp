@@ -29,6 +29,8 @@
   box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
   border-radius: 10px;
   border: 6px solid #305A72;
+  display: inline-block;
+  margin: 1%;
 }
 .form-style-9 ul{
   padding:0;

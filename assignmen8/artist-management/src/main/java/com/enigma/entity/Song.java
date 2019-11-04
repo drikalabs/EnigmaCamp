@@ -1,5 +1,6 @@
 package com.enigma.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -15,7 +16,8 @@ public class Song {
     @GenericGenerator(name="system-uuid",strategy = "uuid")
     private String idSong;
     private String titleSong;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date releaseDate;
 
     @ManyToOne
