@@ -16,6 +16,9 @@ class UserService{
     async findOne(id) {
         return await this.userRepository().findOne({where: {id}});
     }
+    async delete(id) {
+        return await this.userRepository().delete(id);
+    }
 }
 
 export default UserService;

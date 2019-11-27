@@ -8,8 +8,8 @@ const UserSchema = new EntitySchema({
     columns: {
         id: {
             primary: true,
-            type: 'int',
-            generated: true,
+            type: 'varchar',
+            generated: 'uuid',
         },
         username: {
             type: 'varchar',
