@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6885333a-a4ce-46e3-86f3-210e0854b30d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../SolidResponsibilityPrincipal/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SolidResponsibilityPrincipal/src/com/enigma/model/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SolidResponsibilityPrincipal/src/com/enigma/model/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SolidResponsibilityPrincipal/src/com/enigma/model/RectangleCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/Main2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/controller/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/repositories/UserRepositories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/service/CustomDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/entity/Outlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/repository/OutletRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/AnotherServiceImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/OutletService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/OutletServiceImplement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/test/java/com/enigma/service/OutletServiceImplementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/CustomWebSecuriryConfigureAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/CustomWebSecuriryConfigureAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../excercise05" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
@@ -67,6 +76,7 @@
       <updated>1568346387587</updated>
       <workItem from="1569861701697" duration="30000" />
       <workItem from="1570075383692" duration="2587000" />
+      <workItem from="1574138233235" duration="34000" />
     </task>
     <servers />
   </component>
