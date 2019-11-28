@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="377f62c5-76a3-4e6f-a8f0-3d5bbce57380" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/controller/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/repositories/UserRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/service/CustomDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node-js-excercise21/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/entity/Outlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/repository/OutletRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/AnotherServiceImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/OutletService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/main/java/com/enigma/service/OutletServiceImplement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../testing-mockito/src/test/java/com/enigma/service/OutletServiceImplementTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/CustomWebSecuriryConfigureAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../artist-management/src/main/java/com/enigma/CustomWebSecuriryConfigureAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../excercise03/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="377f62c5-76a3-4e6f-a8f0-3d5bbce57380" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +14,7 @@
   <component name="ProjectId" id="1RDvTCfF5VURNrZEkFAdCYhQE7m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignmen1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../excercise02" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -56,21 +38,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569214486545</updated>
-      <workItem from="1574343867125" duration="31000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
