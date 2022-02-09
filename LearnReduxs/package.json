@@ -21,7 +21,7 @@
     "or": "^0.2.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
-    "yarn": "^1.19.1"
+    "yarn": "^1.22.0"
   },
   "dependencies": {
     "redux": "^4.0.4"
