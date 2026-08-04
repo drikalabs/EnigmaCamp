@@ -31,6 +31,10 @@
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1"
+    "enzyme-adapter-react-16": "^1.15.1",
+    "postcss": "^8.5.25"
+  },
+  "overrides": {
+    "postcss": "8.5.25"
   }
 }
