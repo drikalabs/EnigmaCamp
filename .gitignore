@@ -1,8 +1,19 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**
-!**/src/test/**
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+*.swp
+*.swo
+*~
 
 ### STS ###
 .apt_generated
@@ -13,36 +24,51 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
+
+# Node / JS
+node_modules/
+jspm_packages/
+.npm
+.eslintcache
+.node_repl_history
+.yarn-integrity
+.pnp
+.pnp.js
+*.tgz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Build / cache outputs
 build/
+dist/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.fusebox/
+coverage/
+*.lcov
+.nyc_output/
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+*.tsbuildinfo
 
-### VS Code ###
-.vscode/
-
-# Compiled class file
+# Java / Maven / Gradle
+target/
+!.mvn/wrapper/maven-wrapper.jar
+HELP.md
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -50,6 +76,37 @@ build/
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+.mtj.tmp/
 hs_err_pid*
+replay_pid*
+.gradle/
+out/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local history / temp
+.history/
+.local/
+tmp/
+temp/
+logs/
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime / tooling
+pids/
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+.tern-port
+.serverless/
+.dynamodb/
+bower_components/
+.lock-wscript
+lib-cov/
+.grunt/
